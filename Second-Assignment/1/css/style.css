@@ -1,0 +1,393 @@
+/* ------------------------------------------------------------ *\
+CSS Reset
+\* ------------------------------------------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* ------------------------------------------------------------ *\
+    Variables
+\* ------------------------------------------------------------ */
+
+:root {
+    --arial-font-fam: Arial, Helvetica, sans-serif;
+    --trebuchet-ms-font-fam: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --georgia-font-fam: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* ------------------------------------------------------------ *\
+    Base
+\* ------------------------------------------------------------ */
+
+body {
+    color: #ffffff;
+    font-family: var(--arial-font-fam);
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 43px;
+    line-height: 1;
+}
+
+h4 {
+    font-size: 40px;
+    line-height: 1.25;
+}
+
+h5 {
+    font-size: 25px;
+    line-height: 1;
+}
+
+/* ------------------------------------------------------------ *\
+    Btn
+\* ------------------------------------------------------------ */
+
+.btn {
+    display: inline-block;
+    color:#ffffff;
+    font-size: 27px;
+    line-height: 1.2;
+    font-family: var(--trebuchet-ms-font-fam);
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 11px;
+    padding: 20px 47px;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.btn--red {
+    background-color: #FD4C46;
+}
+
+.btn--green {
+    background-color: #00BD9B;
+}
+
+.btn--small {
+    padding: 13px 42px;   
+}
+
+.btn:hover, .btn:focus {
+    opacity: 0.7;
+}
+
+/* ------------------------------------------------------------ *\
+    Heading Underline
+\* ------------------------------------------------------------ */
+
+.heading-underline::after {
+    display: block;
+    background-color: currentColor;
+    content:'';
+    width: 113px;
+    height: 3px;
+}
+
+.heading-underline--green::after {
+    margin-inline: auto;
+    background-color: #00BD9B;
+    width: 150px;
+}
+
+/* ------------------------------------------------------------ *\
+    Shell
+\* ------------------------------------------------------------ */
+
+.shell {
+    max-width: 1170px;
+    margin-inline: auto;
+}
+
+.shell.shell--small {
+    max-width: 1000px
+}
+
+/* ------------------------------------------------------------ *\
+    Header
+\* ------------------------------------------------------------ */
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 60px;
+    margin-bottom: -235px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ------------------------------------------------------------ *\
+    Logo
+\* ------------------------------------------------------------ */
+
+.logo-wrapper {
+    padding-top: 9px;
+    padding-left: 3px;
+}
+
+.logo-link {
+    display: inline-block;
+}
+
+/* ------------------------------------------------------------ *\
+    Nav
+\* ------------------------------------------------------------ */
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:29px;
+}
+
+.nav a {
+    font-size: 15px;  
+    line-height: 1.6;
+    font-family: var(--arial-font-fam);  
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.nav a:where(:hover,:focus) {
+    color: #00bd9b;
+    transform: scale(1.1);
+}
+
+/* ------------------------------------------------------------ *\
+    Intro
+\* ------------------------------------------------------------ */
+
+.intro {
+    min-height: 816px;
+    position: relative;
+    isolation: isolate;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+}
+
+.intro-background {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.intro-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(58,58,58,0.69)
+}
+
+.intro-wrapper {
+    padding-top: 180px;
+}
+
+.intro-heading {
+    margin-bottom: 48px;
+    font-family: var(--georgia-font-fam);
+    font-weight: 400;
+    max-width: 980px;
+}
+
+.intro-content {
+    max-width: 720px;
+    margin-inline: auto;
+    color:#bebebe; 
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 82px;    
+}
+
+/* ------------------------------------------------------------ *\
+    Section
+\* ------------------------------------------------------------ */
+
+.section-wrapper {
+    text-align: center;
+    padding:127px 42px 116px;
+}
+
+.section-head {
+    font-weight: 400;
+    color: #484848;
+    font-family: var(--trebuchet-ms-font-fam);
+    margin-bottom: 45px;
+}
+
+.section-head::after {
+    margin-top: 60px;
+}
+
+.section-content {
+    color:#787878;  
+    font-size: 16px;
+    line-height: 1.31;
+    font-family: var(--trebuchet-ms-font-fam);
+    max-width: 715px;
+    margin-inline: auto;
+    margin-bottom: 36px;
+}
+
+/* ------------------------------------------------------------ *\
+    Section Alt
+\* ------------------------------------------------------------ */
+
+.section-alt {
+    background-color: #646362;
+    min-height: 315px;
+}
+
+.section-alt-wrapper {
+    display: flex;
+    padding: 88px 0px 64px 15px;
+    gap: 5px;
+} 
+
+.section-alt-head {
+    padding-top: 5px;
+    flex:0 0 32%;
+    font-family: var(--georgia-font-fam);
+    font-weight: 400;
+}
+
+.section-alt-head::after {
+    margin-top: 57px;
+}
+
+.section-alt-content {
+    flex: 0 0 68%;
+    font-size: 14px;
+    line-height: 1.72;
+    max-width: 780px;
+    margin-right: -7px;
+    margin-top: -2px;
+}
+
+/* ------------------------------------------------------------ *\
+    Section List
+\* ------------------------------------------------------------ */
+
+.section-list {
+    text-align: center;
+    color: #494949;
+}
+
+.section-list-wrapper {
+    padding: 156px 6px 123px;
+}
+
+.section-list-head {
+    text-align: left;
+    margin-left: 6px;
+    margin-bottom: 118px;
+    font-weight: 400;
+    font-family: var(--georgia-font-fam);
+}
+
+.section-list-head::after {
+    margin-top: 56px;
+    margin-left: 3px;
+}
+
+.section-list-cards {
+    display: grid;
+    grid-template: repeat(2, auto) / repeat(3, minmax(280px,380px) );
+    row-gap: 45px;
+    column-gap: 11px;
+    color: #484848;
+    margin-left: -4px;
+}
+
+/* ------------------------------------------------------------ *\
+    Card
+\* ------------------------------------------------------------ */
+
+.card {
+    font-size: 13px;
+    padding-inline: 30px;
+}
+
+.card-image {
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    margin-bottom: 16px;
+    min-height: 75px;
+}
+
+.card-content h5 { 
+    font-family: var(--trebuchet-ms-font-fam);
+    font-weight: 400;
+    margin-bottom: 19px;
+}
+
+.card-content {
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+/* ------------------------------------------------------------ *\
+    Footer
+\* ------------------------------------------------------------ */
+
+.footer { 
+    background-color: #55514C;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 26px 15px;
+}
+
+.footer-content {
+    font-size: 18px;
+    line-height: 1.34;
+}
+
+.footer-content .separator {
+    margin-inline: 5px;
+}
+
+.back-to-top-arrow {
+    display: inline-block;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-bottom: 4px #ffffff solid;
+    border-left: 4px #ffffff solid;
+    transform: rotate(135deg);
+    top:10px;
+    right:27px;
+}

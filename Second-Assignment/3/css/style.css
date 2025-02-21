@@ -1,0 +1,418 @@
+/* ------------------------------------------------------------ *\
+    CSS Reset   
+\* ------------------------------------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  *::before,
+  *::after {
+      box-sizing: inherit;
+  }
+
+/* ------------------------------------------------------------ *\
+    Font Faces
+\* ------------------------------------------------------------ */
+  
+@font-face {
+    font-family: 'Futura Book';
+    src: url('../assets/fonts/FuturaCyrillicBook.woff2') format('woff2'),
+         url('../assets/fonts/FuturaCyrillicBook.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Butler';
+    src: url('../assets/fonts/Butler.woff2') format('woff2'),
+         url('../assets/fonts/Butler.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Heavy';
+    src: url('../assets/fonts/FuturaCyrillicHeavy.woff2') format('woff2'),
+        url('../assets/fonts/FuturaCyrillicHeavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Butler Bold';
+    src: url('../assets/fonts/Butler-ExtraBold.woff2') format('woff2'),
+        url('../assets/fonts/Butler-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* ------------------------------------------------------------ *\
+    Variables
+\* ------------------------------------------------------------ */
+
+:root {
+    --futura-book-font-fam : 'Futura Book', sans-serif;
+    --futura-heavy-font-fam : 'Futura Heavy', sans-serif;
+    --butler-font-fam : 'Butler', serif;
+    --butler-bold-font-fam : 'Butler Bold', serif;
+    --white-color : #ffffff;
+    --black-color : #000000;
+    --grey-color : #3a3a3a;
+}
+
+/* ------------------------------------------------------------ *\
+    Generics
+\* ------------------------------------------------------------ */
+
+body {
+    color: var(--black-color);
+    font: 24px/1.625 var(--butler-font-fam);
+}
+
+h1 {
+    font: 100px/1.04 var(--butler-bold-font-fam);
+    letter-spacing: 1px;
+}
+
+h2 {
+    font:48px/1.33 var(--butler-font-fam);
+}
+
+h3 {
+    color: var(--grey-color);
+    font: 48px/1.21 var(--butler-font-fam);
+}
+
+h4 {
+    text-transform: uppercase;    
+    font: 18px/3.2 var(--futura-heavy-font-fam);
+    letter-spacing: 2.7px;
+}
+
+h5 {
+    text-transform: uppercase;
+    font: 18px/1.6 var(--futura-heavy-font-fam);
+    letter-spacing: 1.35px;
+}
+
+/* ------------------------------------------------------------ *\
+    Shell    
+\* ------------------------------------------------------------ */
+
+.shell {
+    max-width: 1140px;
+    margin-inline: auto;
+}
+
+.shell--small {
+    max-width: 920px;
+}
+
+/* ------------------------------------------------------------ *\
+    Btn
+\* ------------------------------------------------------------ */
+
+.btn {
+    display: inline-block;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    text-transform: uppercase;    
+    font: 18px/3.2 var(--futura-heavy-font-fam);
+    letter-spacing: 2.7px;
+    border: none;
+    padding: 5px 43px;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in , border 0.3s ease-in; 
+}
+
+.btn:where(:hover, :focus) {
+    background-color: var(--white-color);
+    color: var(--black-color);
+    border: 1px var(--black-color) solid;
+}
+
+/* ------------------------------------------------------------ *\
+    Hover
+\* ------------------------------------------------------------ */
+
+.hover-default {
+    color: currentColor;
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease-in; 
+}
+
+.hover-default:where(:hover, :focus) {
+    transform: scale(1.05);
+}
+
+
+/* ------------------------------------------------------------ *\
+    Underline
+\* ------------------------------------------------------------ */
+
+.underline::after {
+    content: "";
+    display: block;
+    border: 2px #000000 solid;
+    margin-block: -16px;
+}
+
+/* ------------------------------------------------------------ *\
+    Header
+\* ------------------------------------------------------------ */
+
+.header {
+    background-color: var(--white-color);
+    position: relative;
+    z-index: 1;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 37px 31px;
+    margin-inline: -29px -15px; 
+}
+
+/* ------------------------------------------------------------ *\
+    Logo
+\* ------------------------------------------------------------ */
+
+.logo-wrapper {
+    padding-top: 4px;
+}
+
+/* ------------------------------------------------------------ *\
+    Nav
+\* ------------------------------------------------------------ */
+
+.nav ul {
+    list-style: none;
+}
+
+.nav li {
+    display: inline-block;
+    margin-inline: 18px;
+}
+
+.nav a {
+    text-transform: uppercase;    
+    font: 18px/3.2 var(--futura-heavy-font-fam);
+    letter-spacing: 2.7px;
+}
+
+/* ------------------------------------------------------------ *\
+    Hero    
+\* ------------------------------------------------------------ */
+
+.hero {
+    min-height: 772px;
+    position:relative;
+    isolation: isolate;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: -115px;
+    margin-bottom: 85px;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: -1;    
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-main-wrapper {
+    width: 100%;
+}
+
+.hero-wrapper {
+    width: 100%;
+    text-align: right;
+    padding: 142px 55px 20px;
+}
+
+.hero-head-wrapper {
+    max-width: 350px;
+    display: inline-block;
+    align-self: flex-end;
+    text-align: left;   
+}
+
+.hero-head-wrapper h5 {
+    line-height: 1;
+    letter-spacing: 3.9px;
+    margin-top: -8px;
+}
+
+/* ------------------------------------------------------------ *\
+    Section
+\* ------------------------------------------------------------ */
+
+.section-wrapper {
+    padding-block: 66px 129px;
+    text-align: center;
+}
+
+/* ------------------------------------------------------------ *\
+    Section Articles
+\* ------------------------------------------------------------ */
+
+.section-articles-wrapper {
+    padding: 22px 5px;
+    display: grid;
+    grid-template: 650px 450px / 500px 500px;
+    column-gap: 129px;
+    row-gap: 133px;
+
+}
+
+/* ------------------------------------------------------------ *\
+    Card
+\* ------------------------------------------------------------ */
+
+.card {
+    font-size: 24px;
+}
+
+.card:first-child {
+    align-self: center;
+}
+
+.card:first-child .card-head {
+    margin-block: -18px 17px;    
+}
+
+.card-head {
+    margin-bottom: 15px;
+}
+
+.card--small {
+    width: 470px;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+/* ------------------------------------------------------------ *\
+    Section Alt   
+\* ------------------------------------------------------------ */
+
+.section-alt-wrapper {
+    display: flex;
+    font-size: 0;
+    padding-block: 1px 87px;
+}
+
+.section-alt-wrapper .section-alt-image { 
+    flex: 0 0 33.33%;
+    padding-inline: 7px;
+    height: 366px;
+}
+.section-alt-wrapper .section-alt-image img {
+    width: 100%;
+    height: 100%;
+} 
+
+/* ------------------------------------------------------------ *\
+    Section Contact Us
+\* ------------------------------------------------------------ */
+
+.contact-us-wrapper {
+    padding: 5px 42px 80px;
+}
+
+/* ------------------------------------------------------------ *\
+    Form
+\* ------------------------------------------------------------ */
+
+.form-contact-us .form-body {
+    margin-bottom: 32px;
+}
+
+.form-contact-us .form-row:not(:first-child) {
+    margin-top: 63px;
+}
+
+.form-contact-us .form-label {
+    text-transform: uppercase;    
+    font: 18px/3.2 var(--futura-heavy-font-fam);
+    letter-spacing: 2.7px;  
+}
+
+.form-contact-us .form-controls {
+    margin-top: 5px;
+}
+
+.form-contact-us .field {
+    width: 100%;
+    padding: 21px 19px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+/* ------------------------------------------------------------ *\
+    Footer
+\* ------------------------------------------------------------ */
+
+.footer-main-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 75px 33px 47px;
+}
+
+.footer-main-wrapper .socials-wrapper {
+    flex: 0 0 33.33%
+}
+
+.footer-main-wrapper .socials ul {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+    margin-left: 10px;
+}
+
+.footer-main-wrapper .socials-head {
+    max-width: 300px;
+    margin: -8px 0px 32px 14px
+}
+
+.footer-main-wrapper .socials-head h4 {
+    line-height: 1.5;
+}
+
+.footer-main-wrapper .footer-address {
+    flex: 0 0 33.33%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-main-wrapper .footer-logo {
+    flex: 0 0 33.33%;
+    margin-top: 9px;
+    text-align: center;
+}
+
+.copyrigth {
+    font-size: 18px;
+    line-height: 1.33;
+    text-align: center;
+    font-family: var(--futura-book-font-fam);
+}
