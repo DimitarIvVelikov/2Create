@@ -74,7 +74,7 @@
 
 body {
     color: var(--black-color);
-    font: 24px/1.625 var(--butler-font-fam);
+    font: 24px/1.2 var(--butler-font-fam);
 }
 
 h1 {
@@ -144,7 +144,6 @@ h5 {
 
 .hover-default {
     color: currentColor;
-    display: inline-block;
     text-decoration: none;
     transition: transform 0.3s ease-in; 
 }
@@ -171,24 +170,14 @@ h5 {
 
 .header {
     background-color: var(--white-color);
-    position: relative;
-    z-index: 1;
+    padding-block: 37px 31px;
 }
 
 .header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-block: 37px 31px;
     margin-inline: -29px -15px; 
-}
-
-/* ------------------------------------------------------------ *\
-    Logo
-\* ------------------------------------------------------------ */
-
-.logo-wrapper {
-    padding-top: 4px;
 }
 
 /* ------------------------------------------------------------ *\
@@ -205,24 +194,31 @@ h5 {
 }
 
 .nav a {
+    color: currentColor;
     text-transform: uppercase;    
     font: 18px/3.2 var(--futura-heavy-font-fam);
     letter-spacing: 2.7px;
+    text-decoration: none;
+    transition: color .3s ease-in;
+    text-shadow:none
 }
+
+.nav a:where(:hover, :focus) {
+    color: var(--grey-color);
+    text-shadow: 0 2px 5px rgba(7, 1, 1, 0.5);
+} 
 
 /* ------------------------------------------------------------ *\
     Hero    
 \* ------------------------------------------------------------ */
 
 .hero {
-    min-height: 772px;
     position:relative;
     isolation: isolate;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin-top: -115px;
-    margin-bottom: 85px;
+    padding-block: 150px;
 }
 
 .hero-background {
@@ -302,15 +298,14 @@ h5 {
     margin-bottom: 15px;
 }
 
-.card--small {
-    width: 470px;
-}
-
 .card-image {
     width: 100%;
     height: auto;
 }
 
+.card--small {
+    width: 470px;
+}
 /* ------------------------------------------------------------ *\
     Section Alt   
 \* ------------------------------------------------------------ */
@@ -372,10 +367,15 @@ h5 {
     Footer
 \* ------------------------------------------------------------ */
 
-.footer-main-wrapper {
-    display: flex;
+.footer {
+    padding: 75px 47px; 
+    text-align: center;
+}
+
+.cols {
+    display: grid;
     justify-content: center;
-    padding: 75px 33px 47px;
+    
 }
 
 .footer-main-wrapper .socials-wrapper {
@@ -400,19 +400,16 @@ h5 {
 
 .footer-main-wrapper .footer-address {
     flex: 0 0 33.33%;
-    text-align: center;
     margin-top: 20px;
 }
 
 .footer-main-wrapper .footer-logo {
     flex: 0 0 33.33%;
     margin-top: 9px;
-    text-align: center;
 }
 
 .copyrigth {
     font-size: 18px;
     line-height: 1.33;
-    text-align: center;
     font-family: var(--futura-book-font-fam);
 }
