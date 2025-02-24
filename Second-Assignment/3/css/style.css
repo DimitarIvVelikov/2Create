@@ -6,22 +6,35 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  *::before,
-  *::after {
-      box-sizing: inherit;
-  }
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+*:focus-visible {
+    outline: none;
+}
 
 /* ------------------------------------------------------------ *\
     Font Faces
 \* ------------------------------------------------------------ */
   
 @font-face {
-    font-family: 'Futura Book';
+    font-family: 'Futura';
     src: url('../assets/fonts/FuturaCyrillicBook.woff2') format('woff2'),
          url('../assets/fonts/FuturaCyrillicBook.woff') format('woff');
-    font-weight: normal;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('../assets/fonts/FuturaCyrillicHeavy.woff2') format('woff2'),
+         url('../assets/fonts/FuturaCyrillicHeavy.woff') format('woff');
+    font-weight: 900;
     font-style: normal;
     font-display: swap;
 }
@@ -30,25 +43,16 @@
     font-family: 'Butler';
     src: url('../assets/fonts/Butler.woff2') format('woff2'),
          url('../assets/fonts/Butler.woff') format('woff');
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Futura Heavy';
-    src: url('../assets/fonts/FuturaCyrillicHeavy.woff2') format('woff2'),
-        url('../assets/fonts/FuturaCyrillicHeavy.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Butler Bold';
+    font-family: 'Butler';
     src: url('../assets/fonts/Butler-ExtraBold.woff2') format('woff2'),
-        url('../assets/fonts/Butler-ExtraBold.woff') format('woff');
-    font-weight: bold;
+         url('../assets/fonts/Butler-ExtraBold.woff') format('woff');
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -59,48 +63,41 @@
 \* ------------------------------------------------------------ */
 
 :root {
-    --futura-book-font-fam : 'Futura Book', sans-serif;
-    --futura-heavy-font-fam : 'Futura Heavy', sans-serif;
+    --futura-font-fam : 'Futura', sans-serif;
     --butler-font-fam : 'Butler', serif;
-    --butler-bold-font-fam : 'Butler Bold', serif;
     --white-color : #ffffff;
     --black-color : #000000;
     --grey-color : #3a3a3a;
 }
 
 /* ------------------------------------------------------------ *\
-    Generics
+    Base
 \* ------------------------------------------------------------ */
 
 body {
     color: var(--black-color);
-    font: 24px/1.2 var(--butler-font-fam);
+    font: 400 24px/1.2 var(--butler-font-fam);
 }
 
 h1 {
-    font: 100px/1.04 var(--butler-bold-font-fam);
-    letter-spacing: 1px;
+    font: 700 100px/1.04 var(--butler-font-fam);
+    letter-spacing: 0.011em;
 }
 
 h2 {
-    font:48px/1.33 var(--butler-font-fam);
-}
-
-h3 {
-    color: var(--grey-color);
-    font: 48px/1.21 var(--butler-font-fam);
+    font: 400 48px/1.333 var(--butler-font-fam);
 }
 
 h4 {
     text-transform: uppercase;    
-    font: 18px/3.2 var(--futura-heavy-font-fam);
-    letter-spacing: 2.7px;
+    font: 900 18px/1.2 var(--futura-font-fam);
+    letter-spacing: 0.15em;
 }
 
 h5 {
     text-transform: uppercase;
-    font: 18px/1.6 var(--futura-heavy-font-fam);
-    letter-spacing: 1.35px;
+    font: 900 18px/1 var(--futura-font-fam);
+    letter-spacing: 0.22em;
 }
 
 /* ------------------------------------------------------------ *\
@@ -108,7 +105,7 @@ h5 {
 \* ------------------------------------------------------------ */
 
 .shell {
-    max-width: 1140px;
+    max-width: 1130px;
     margin-inline: auto;
 }
 
@@ -117,67 +114,19 @@ h5 {
 }
 
 /* ------------------------------------------------------------ *\
-    Btn
-\* ------------------------------------------------------------ */
-
-.btn {
-    display: inline-block;
-    color: var(--white-color);
-    background-color: var(--black-color);
-    text-transform: uppercase;    
-    font: 18px/3.2 var(--futura-heavy-font-fam);
-    letter-spacing: 2.7px;
-    border: none;
-    padding: 5px 43px;
-    transition: background-color 0.3s ease-in, color 0.3s ease-in , border 0.3s ease-in; 
-}
-
-.btn:where(:hover, :focus) {
-    background-color: var(--white-color);
-    color: var(--black-color);
-    border: 1px var(--black-color) solid;
-}
-
-/* ------------------------------------------------------------ *\
-    Hover
-\* ------------------------------------------------------------ */
-
-.hover-default {
-    color: currentColor;
-    text-decoration: none;
-    transition: transform 0.3s ease-in; 
-}
-
-.hover-default:where(:hover, :focus) {
-    transform: scale(1.05);
-}
-
-
-/* ------------------------------------------------------------ *\
-    Underline
-\* ------------------------------------------------------------ */
-
-.underline::after {
-    content: "";
-    display: block;
-    border: 2px #000000 solid;
-    margin-block: -16px;
-}
-
-/* ------------------------------------------------------------ *\
     Header
 \* ------------------------------------------------------------ */
 
 .header {
     background-color: var(--white-color);
-    padding-block: 37px 31px;
+    padding-block: 40px 35px;
 }
 
 .header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-inline: -29px -15px; 
+    margin-left: -34px; 
 }
 
 /* ------------------------------------------------------------ *\
@@ -186,21 +135,19 @@ h5 {
 
 .nav ul {
     list-style: none;
-}
-
-.nav li {
-    display: inline-block;
-    margin-inline: 18px;
+    display: flex;
+    gap: 41px;
 }
 
 .nav a {
     color: currentColor;
     text-transform: uppercase;    
-    font: 18px/3.2 var(--futura-heavy-font-fam);
-    letter-spacing: 2.7px;
+    font: 900 18px/1.2 var(--futura-font-fam);
+    letter-spacing: 0.15em;
     text-decoration: none;
-    transition: color .3s ease-in;
-    text-shadow:none
+    transition: color .3s ease-in , text-shadow .3s ease-in;
+    text-shadow:none;
+    cursor: pointer;
 }
 
 .nav a:where(:hover, :focus) {
@@ -215,16 +162,13 @@ h5 {
 .hero {
     position:relative;
     isolation: isolate;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-block: 150px;
+    padding-block: 220px;
 }
 
 .hero-background {
     position: absolute;
     inset: 0;
-    z-index: -1;    
+    z-index: -1;
 }
 
 .hero-background img {
@@ -233,183 +177,285 @@ h5 {
     object-fit: cover;
 }
 
-.hero-main-wrapper {
-    width: 100%;
+.hero-content {
+    width: 35.5%;
+    margin-left: auto;
 }
 
-.hero-wrapper {
-    width: 100%;
-    text-align: right;
-    padding: 142px 55px 20px;
-}
-
-.hero-head-wrapper {
-    max-width: 350px;
-    display: inline-block;
-    align-self: flex-end;
-    text-align: left;   
-}
-
-.hero-head-wrapper h5 {
-    line-height: 1;
-    letter-spacing: 3.9px;
+.hero-content h5 {
     margin-top: -8px;
-}
-
-/* ------------------------------------------------------------ *\
-    Section
-\* ------------------------------------------------------------ */
-
-.section-wrapper {
-    padding-block: 66px 129px;
-    text-align: center;
 }
 
 /* ------------------------------------------------------------ *\
     Section Articles
 \* ------------------------------------------------------------ */
 
-.section-articles-wrapper {
-    padding: 22px 5px;
-    display: grid;
-    grid-template: 650px 450px / 500px 500px;
-    column-gap: 129px;
-    row-gap: 133px;
+.section-articles { 
+    padding-block: 150px 75px;
+}
 
+.section-articles h2 { 
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.section-articles-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 153px 130px;
 }
 
 /* ------------------------------------------------------------ *\
-    Card
+    Article 
 \* ------------------------------------------------------------ */
 
-.card {
-    font-size: 24px;
+.article {
+    line-height: 1.63;
 }
 
-.card:first-child {
+.article h4 {
+    margin-bottom: 32px;
+}
+
+.article-image img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+.article--small {
+    width: 470px;
+}
+
+.article--center {
     align-self: center;
 }
 
-.card:first-child .card-head {
-    margin-block: -18px 17px;    
-}
-
-.card-head {
-    margin-bottom: 15px;
-}
-
-.card-image {
-    width: 100%;
-    height: auto;
-}
-
-.card--small {
-    width: 470px;
-}
 /* ------------------------------------------------------------ *\
-    Section Alt   
+    Section   
 \* ------------------------------------------------------------ */
 
-.section-alt-wrapper {
-    display: flex;
-    font-size: 0;
-    padding-block: 1px 87px;
+.section {
+    padding-block: 75px;
 }
 
-.section-alt-wrapper .section-alt-image { 
-    flex: 0 0 33.33%;
-    padding-inline: 7px;
-    height: 366px;
+.section h2 {
+    text-align: center;
+    margin-bottom: 134px;
 }
-.section-alt-wrapper .section-alt-image img {
+
+.section h2 a {
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: currentColor;
+    text-shadow:none;
+    transition: color .3s ease-in , text-shadow .3s ease-in;
+}
+
+.section h2 a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 3px;
     width: 100%;
-    height: 100%;
+    height: 2px;
+    background-color: #000000;
+    transition: background-color .3s ease-in;
+}
+
+.section h2 a:where(:hover, :focus) {
+    color: var(--grey-color);
+    text-shadow: 0 2px 5px rgba(7, 1, 1, 0.5);
 } 
 
+.section h2 a:where(:hover, :focus):after{
+    background-color: var(--grey-color);
+}
+
 /* ------------------------------------------------------------ *\
-    Section Contact Us
+    List Feeds
 \* ------------------------------------------------------------ */
 
-.contact-us-wrapper {
-    padding: 5px 42px 80px;
+.list-feeds {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 16px;
+}
+
+.list-feeds a {
+    cursor: pointer;
+    display: block;
+    transition: opacity .3s ease-in-out;
+}
+
+.list-feeds a:where(:hover, :focus) {
+    opacity: 0.7;   
+}
+
+.list-feeds img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
 }
 
 /* ------------------------------------------------------------ *\
     Form
 \* ------------------------------------------------------------ */
 
-.form-contact-us .form-body {
-    margin-bottom: 32px;
+.form-contact-us {
+    padding-block:75px;
 }
 
-.form-contact-us .form-row:not(:first-child) {
-    margin-top: 63px;
+.form__head {
+    color: var(--grey-color);
+    text-align: center;
+    margin-bottom: 151px;
 }
 
-.form-contact-us .form-label {
-    text-transform: uppercase;    
-    font: 18px/3.2 var(--futura-heavy-font-fam);
-    letter-spacing: 2.7px;  
+.form__head h2 {
+    line-height: 1.24;
 }
 
-.form-contact-us .form-controls {
-    margin-top: 5px;
+.form__body {
+    padding-inline: 38px;
+    margin-bottom: 30px;
 }
 
-.form-contact-us .field {
+.form__actions {
+    padding-inline: 40px;
+}
+
+.form__row + .form__row {
+    margin-top: 80px;
+}
+
+.form__label {
+    display: block;
+    text-transform: uppercase;
+    font: 900 18px/1.2 var(--futura-font-fam);
+    letter-spacing: 0.15em; 
+    margin-bottom: 23px;
+}
+
+/* ------------------------------------------------------------ *\
+    Form Btn
+\* ------------------------------------------------------------ */
+
+.form__btn {
+    display: inline-block;
+    font: 900 18px/1.2 var(--futura-font-fam);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding-inline: 42px;
+    height: 68px;
+    cursor: pointer;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    border: 1px transparent solid;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in , border 0.3s ease-in; 
+}
+
+.form__btn:where(:hover, :focus) {
+    color: var(--black-color);
+    background-color: var(--white-color);
+    border: 1px var(--black-color) solid;
+}
+
+/* ------------------------------------------------------------ *\
+    Field
+\* ------------------------------------------------------------ */
+
+.field {
+    font: 400 24px/1.2 var(--futura-font-fam);
     width: 100%;
-    padding: 21px 19px;
-    font-size: 20px;
-    vertical-align: middle;
+    height: 70px;
+    padding-inline: 19px;
+    border: 2px #D7D8D9 solid;
+    transition: border .3s ease-in;
+}
+
+.field:where(:hover, :focus) {
+    border: 2px var(--black-color) solid 
+}
+
+.field--textarea {
+    height: 230px;
+    padding: 19px;
 }
 
 /* ------------------------------------------------------------ *\
     Footer
 \* ------------------------------------------------------------ */
 
-.footer {
-    padding: 75px 47px; 
-    text-align: center;
+.footer-main {
+    padding-block: 75px 47px;
 }
 
-.cols {
+.footer-cols {
     display: grid;
-    justify-content: center;
-    
+    grid-template-columns: repeat(3 , 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 56px;
 }
 
-.footer-main-wrapper .socials-wrapper {
-    flex: 0 0 33.33%
+.footer-col:first-child {
+    justify-self: flex-end;
 }
 
-.footer-main-wrapper .socials ul {
+.footer-col:nth-child(3) {
+    justify-self: flex-start;
+}
+
+.footer-col address {
+    line-height: 1.6;
+    font-style: normal;
+    margin-right: 36px;
+}
+
+/* ------------------------------------------------------------ *\
+    Socials 
+\* ------------------------------------------------------------ */
+
+.socials h4 {
+    max-width: 300px;
+    line-height: 1.6;
+    margin-block:-4px 30px;
+}
+
+.socials ul {
     display: flex;
     list-style: none;
-    gap: 22px;
-    margin-left: 10px;
+    gap: 27px;
 }
 
-.footer-main-wrapper .socials-head {
-    max-width: 300px;
-    margin: -8px 0px 32px 14px
+.socials i {
+    display: block;
 }
 
-.footer-main-wrapper .socials-head h4 {
-    line-height: 1.5;
+.socials img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
 }
 
-.footer-main-wrapper .footer-address {
-    flex: 0 0 33.33%;
-    margin-top: 20px;
+.socials a {
+    display: block;
+    transition: transform .3s ease-in;
+    cursor: pointer;
 }
 
-.footer-main-wrapper .footer-logo {
-    flex: 0 0 33.33%;
-    margin-top: 9px;
+.socials a:where(:hover, :focus) {
+    transform: scale(0.9);
 }
+
+/* ------------------------------------------------------------ *\
+    Copyright
+\* ------------------------------------------------------------ */
 
 .copyrigth {
-    font-size: 18px;
-    line-height: 1.33;
-    font-family: var(--futura-book-font-fam);
+    font: 400 18px/1.33 var(--futura-font-fam);
+    text-align: center;
+    padding-block: 14px 65px;
 }
