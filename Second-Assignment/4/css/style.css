@@ -7,10 +7,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-  
+
 *::before,
 *::after {
     box-sizing: inherit;
+}
+
+*:focus-visible {
+    outline: none;
 }
 
 /* ------------------------------------------------------------ *\
@@ -20,7 +24,7 @@
 @font-face {
     font-family: 'Helvetica Neue';
     src: url(../assets/fonts/HelveticaNeue-Light.woff2) format('woff2'),
-        url(../assets/fonts/HelveticaNeue-Light.woff) format('woff');
+         url(../assets/fonts/HelveticaNeue-Light.woff) format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -29,7 +33,7 @@
 @font-face {
     font-family: 'Helvetica Neue';
     src: url(../assets/fonts/HelveticaNeue-Roman.woff2) format('woff2'),
-        url(../assets/fonts/HelveticaNeue-Roman.woff) format('woff');
+         url(../assets/fonts/HelveticaNeue-Roman.woff) format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -38,7 +42,7 @@
 @font-face {
     font-family: 'Helvetica Neue';
     src: url(../assets/fonts/HelveticaNeue-Medium.woff2) format('woff2'),
-        url(../assets/fonts/HelveticaNeue-Medium.woff) format('woff');
+         url(../assets/fonts/HelveticaNeue-Medium.woff) format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -47,7 +51,7 @@
 @font-face {
     font-family: 'Helvetica Neue';
     src: url(../assets/fonts/HelveticaNeue-Bold.woff2) format('woff2'),
-        url(../assets/fonts/HelveticaNeue-Bold.woff) format('woff');
+         url(../assets/fonts/HelveticaNeue-Bold.woff) format('woff');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -74,11 +78,12 @@
 
 body {
     color: var(--grey-font-color);
-    font: 500 15px/1.6 var(--helvetica-neue);
+    font: 500 15px/1.3 var(--helvetica-neue);
 }
 
 h1 {
-    font:300 40px/1.805 var(--helvetica-neue);
+    color: var(--dark-grey-font-color);
+    font: 300 40px/1.2 var(--helvetica-neue);
 }
 
 /* ------------------------------------------------------------ *\
@@ -99,8 +104,8 @@ h1 {
     display: block;
     width: 100%;
     height: 1px;
-    border: 1px #F0F0F0 solid;
-    border-color: #F0F0F0 transparent transparent transparent;
+    border: 1px solid transparent;
+    border-top-color: #F0F0F0;
     margin-top: 17px;
 }
 
@@ -132,13 +137,13 @@ h1 {
 
 .header {
     box-shadow: 0 4px 6px -3px rgba(0, 0, 0, 0.15);
+    padding-block: 22px 27px;
 }
 
 .header-wrapper {
     font: 13px/1.54 var(--open-sans-font-fam);
     display: flex;
     align-items: center;
-    padding-block: 19px 25px;
 }
 
 .header-wrapper .moto {
@@ -151,57 +156,53 @@ h1 {
 }
 
 .header-wrapper .divider {
-    border: 1px var(--lighter-grey-font-color) solid;
+    background-color: var(--lighter-grey-font-color);
     width: 1px;
     height: 30px;
-    margin-inline: 21px 16px;
+    margin-inline: 18px;
 }
 
 /* ------------------------------------------------------------ *\
     Logo
 \* ------------------------------------------------------------ */
 
-.logo {
-    line-height: 0;
-}
-
 .logo img {
     width: 100%;
     height: auto;
+    vertical-align: top;
+    margin-left: -4px;
 }
-
 
 /* ------------------------------------------------------------ *\
     Form
 \* ------------------------------------------------------------ */
 
 .form__head {
-    color: var(--dark-grey-font-color);
-    font-weight: 300;
-    padding: 30px 8px 26px;
+    padding: 44px 8px 40px;
 }
 
 .form__section h4 {
-    margin-left: 9px;
-    margin-bottom: 38px;
+    margin: 0 0 39px 10px;
 }
 
 .form__section + .form__section {
-    padding-top: 57px;
+    padding-top: 58px;
 }
 
 .form__row {
     position: relative;
     max-width: 450px;
-    margin-inline: auto;
-    margin-bottom: 17px;
+    margin: 0 auto 19px;
+    padding-inline: 18px 2px;
 }
 
-.form__content + .form__row {
-    margin-bottom: 32px;
+.form__row--optional { 
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.form__row > .form__label {
+.form__label {
     position: absolute;
     left: -230px;
     width: 230px;
@@ -211,7 +212,7 @@ h1 {
     transform: translateY(-50%);
 }
 
-.form__label:has(+.form__controls textarea) {
+.form__label--textarea {
     top: 10%; 
     transform: none;
     line-height: 1.2; 
@@ -223,42 +224,22 @@ h1 {
 
 .form__cols {
     display: flex;
-    margin-inline: -7px;
+    gap: 18px;
 }
 
-.form__register .form__col {
-    margin-inline: 7px;
+.form__content {
+    padding-inline: 10px;
+    margin-bottom: 57px;
+    line-height: 1.6;
 }
 
-.form__register .form__row > .form__controls, 
-.form__register .form__row > .form__cols {
-    padding-inline: 18px 2px;
+.form__content + .form__row {
+    margin-bottom: 32px;
 }
 
-.form__register .form__content {
-    padding-inline: 5px;
-    margin-block: -10px 57px
-}
-
-.checkbox label[for=checkbox-tnc    ],
-.tnc {
-    color: #999999;
-    font-size: 13px;
-    transition: color 0.3s ease-in; 
-}
-
-.tnc:where(:hover, :focus) {
-    color: var(--blue-font-color);
-}
-
-
-.form__register .form__action-wrapper {
-    max-width: 450px;
-    margin-inline: auto;
-}
-
-.form__register .form__action-btn-wrapper {
-    padding-inline: 13px 2px;
+.form__action {
+    text-align: center;
+    margin-left: -38px;
 }
 
 /* ------------------------------------------------------------ *\
@@ -266,14 +247,21 @@ h1 {
 \* ------------------------------------------------------------ */
 
 .field {
+    cursor: pointer;
     color: var(--lighter-grey-font-color);
     font: 400 15px var(--helvetica-neue);
     border: 1px solid rgba(115, 115, 115, 0.38); 
     box-shadow: inset 0 0 9px rgba(81, 81, 81, 0.06), inset 1px 1px 1px rgba(0, 0, 0, 0.09); 
-    padding: 13px 16px;
+    padding-inline: 16px;
+    height: 44px;
     border-radius: 7px;
     width: 100%;
     transition: border .7s ease-in-out, 'box-shadow' .7s ease-in-out;
+}
+
+.field--textarea {
+    padding: 13px 16px;
+    height: 120px;
 }
 
 .field::placeholder {
@@ -286,16 +274,12 @@ h1 {
     box-shadow: 0 0 6px 1px rgba(0, 153, 204, 0.75);
 }
 
-.field:focus-visible {
-    outline: none;
-} 
-
 .field--xxsmall {
-    width: 25%;
+    width: 25.5%;
 }
 
 .field--xsmall {
-    width: 28%;
+    width: 29%;
 }
 
 .field--small {
@@ -303,61 +287,58 @@ h1 {
 }
 
 .field--medium {
-    width: 54%;
+    width: 55%;
 }
 
 .field--large {
-    width: 57%;
-}
-
-.field--xlarge {
-    width: 76%;
-}
-
-.field--xxlarge {
-    width: 100%;
-}
-
-.form__controls:has(.field--textarea)::after {
-    display: block;
-    content: " " attr(data-maxlength) " characters left";
-    text-align: right;
-    color: var(--light-grey-font-color);
-    font: italic 400 13px/2 var(--helvetica-neue);
+    width: 75%;
 }
 
 /* ------------------------------------------------------------ *\
-    Form Optional
+    Form Hint
 \* ------------------------------------------------------------ */
 
-.optional {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.optional:after {
-    display: inline-block;
-    content: "(optional)";
+.form__hint {
     font: 400 15px/1.6 var(--helvetica-neue);
     color: var(--lighter-grey-font-color);
 }
 
-/* ------------------------------------------------------------ *\
-    Select Arrows
-\* ------------------------------------------------------------ */
-
-.select > select.field {
-    appearance: none;
-    background: linear-gradient(to bottom, #FFFFFF 50%, #FAFAFA 50%);
+.form__hint--textarea {
+    color: var(--light-grey-font-color);
+    font: italic 400 13px/1.2 var(--helvetica-neue);
+    display: block;
+    text-align: right;
 }
 
-.select-arrows {
+/* ------------------------------------------------------------ *\
+    Select
+\* ------------------------------------------------------------ */
+
+.select select {
+    appearance: none;
+    background: linear-gradient(to bottom, #FFFFFF 50%, #FAFAFA 50%);
+    color: var(--lighter-grey-font-color);
+    font: 400 15px var(--helvetica-neue);
+    border: 1px solid rgba(115, 115, 115, 0.38); 
+    box-shadow: inset 0 0 9px rgba(81, 81, 81, 0.06), inset 1px 1px 1px rgba(0, 0, 0, 0.09); 
+    padding-inline: 16px;
+    height: 44px;
+    border-radius: 7px;
+    width: 100%;
+    transition: border .7s ease-in-out, 'box-shadow' .7s ease-in-out;
+}
+
+.select select:where(:hover, :focus) { 
+    border: 1px solid rgba(0, 110, 204, 0.38); 
+    box-shadow: 0 0 6px 1px rgba(0, 153, 204, 0.75);
+}
+
+.select {
     position: relative;
 }
 
-.select-arrows::before,
-.select-arrows::after {
+.select::before,
+.select::after {
     content: '';
     position: absolute;
     width: 0;
@@ -366,18 +347,38 @@ h1 {
     z-index: 5;
 }
 
-.select-arrows::before {
-    border-width: 0 6px 10px;
+.select::before {
+    border-width: 0px 2px 4px;
     border-color: transparent transparent var(--grey-font-color) transparent;
-    top: 7px;
-    right: 11px;
+    top: 16px;
+    right: 21px;
 }
 
-.select-arrows::after {
-    border-width: 10px 6px 0;
+.select::after {
+    border-width: 4px 2px 0;
     border-color: var(--grey-font-color) transparent transparent transparent;
-    bottom: 7px;
-    right: 11px;
+    bottom: 16px;
+    right: 21px;
+}
+
+/* ------------------------------------------------------------ *\
+    Checkbox
+\* ------------------------------------------------------------ */
+
+.checkbox input{
+    box-shadow: inset 0 0 9px rgba(81, 81, 81, 0.06);
+}
+
+.checkbox label[for=checkbox_terms],
+.terms {
+    cursor: pointer;
+    color: #999999;
+    font-size: 13px;
+    transition: color 0.3s ease-in; 
+}
+
+.terms:where(:hover, :focus) {
+    color: var(--blue-font-color);
 }
 
 /* ------------------------------------------------------------ *\
@@ -386,15 +387,15 @@ h1 {
 
 .form__btn {
     display: inline-block;
-    width: 181px;
-    font-weight: 700;
+    font: 700 15px var(--helvetica-neue);
     color: #ffffff;
-    padding-block: 13px;
-    font-size: 15px;
+    width: 181px;
     margin-inline: 5px;
-    border: none;
+    padding-block: 13px;
+    border: 1px transparent solid;
     border-radius: 3px;
-    transition: background-color .5s ease, color .5s ease;
+    transition: background-color .5s ease, color .5s ease, border .3s ease-in;
+    cursor: pointer;
 }
 
 .form__btn--save {
@@ -408,44 +409,34 @@ h1 {
 .form__btn:where(:hover, :focus) {
     background-color: #ffffff;
     color: var(--grey-font-color);
+    border-color: var(--blue-font-color);
 }
 
 /* ------------------------------------------------------------ *\
     Footer
 \* ------------------------------------------------------------ */
 
-.footer-wrapper {
-    font: 700 14px/1.43 var(--tahoma-font-fam);
+.footer {
+    font: 600 14px var(--tahoma-font-fam);
     letter-spacing: -0.56px;
     color: #5e5e5e;
     padding-block: 29px;
+    padding-left: 37px;
+    text-align: center;
 }
 
-.footer-content {
-    max-width: 450px;
-    padding-inline: 82px 20px;
-    margin-inline: auto;
-}
-
-.footer-wrapper .copyright {
-    display: inline-block;
-} 
-
-.footer-qns-link {
+.qns-link {
     color: #5e5e5e ;
     transition: color 0.3s ease-in; 
+    cursor: pointer;
 }
 
-.footer-qns-link:where(:hover, :focus) {
+.qns-link:where(:hover, :focus) {
     color: var(--blue-font-color)
 }
 
-.footer-wrapper .footer-divider {
+.footer .divider {
     margin-inline: 11px 8px;
-}
-
-.footer-wrapper .footer-divider:after {
-    content:"";
     display:inline-block;
     width: 2px;
     height: 2px;

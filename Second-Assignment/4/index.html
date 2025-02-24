@@ -30,7 +30,7 @@
                 </header><!-- /.header -->
     
                 <main class="main">
-                    <section class="form__register">
+                    <div class="form-register">
                         <div class="shell">
                             <form action="" method="post">
                                 <header class="form__head">
@@ -41,270 +41,258 @@
                                     <div class="form__section">
                                         <h4 class="horizontal-line">Tell Us More About Yourself</h4>
     
-                                        <div class="form__group">
-                                            <div class="form__row">
-                                                <label for="first-name" class="form__label form__label--blue">Your Full Name</label><!-- /.form__label -->
-    
-                                                <div class="form__cols">
-                                                    <div class="form__col field--small">
-                                                        <div class="form__controls">
-                                                            <input class="field" type="text" name="first-name" id="first-name" placeholder="First">
-                                                        </div><!-- /.form__controls -->
-                                                    </div><!-- /.form__col -->
-                                                    
-                                                    <div class="form__col field--small">
-                                                        <div class="form__controls">
-                                                            <input class="field" type="text" name="last-name" id="last-name" placeholder="Last">
-                                                        </div><!-- /.form__controls -->
-                                                    </div><!-- /.form__col -->
-                                                </div><!-- /.form__cols -->
-                                            </div><!-- /.form__row -->
-    
-                                            <div class="form__row">
-                                                <label for="title" class="form__label">Your Title</label><!-- /.form__label -->
-    
-                                                <div class="form__controls field--xxlarge select-arrows">
-                                                    <div class="select">
-                                                        <select class="field"  id="title" name="title">
-                                                            <option value="" disabled selected hidden>Select</option>
-                                                            
-                                                            <option value="1">1</option>
-                                                            
-                                                            <option value="2">2</option>
-                                                            
-                                                            <option value="3">3</option>
-                                                            
-                                                            <option value="4">4</option>
-                                                        </select>
-                                                    </div><!-- /.select -->
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__row -->
-    
-                                            <div class="form__row">
-                                                <label for="phone-number" class="form__label">Your Phone Number</label><!-- /.form__label -->
-    
-                                                <div class="form__controls field--large">
-                                                    <input class="field" type="tel" id="phone-number" name="phone-number" placeholder="012 - 345 - 6789">
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__row -->
-    
-                                            <div class="form__row">
-                                                <label for="email" class="form__label">Your Email</label><!-- /.form__label -->
-    
-                                                <div class="form__controls field--xlarge">
-                                                    <input class="field" type="email" name="email" id="email" placeholder="marco@polo.com">
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__row -->
-                                        </div><!-- /.form__group -->
-                                    </div><!-- /.form__section -->
-    
-                                    <div class="form__section">
-                                        <h4 class="horizontal-line">Tell Us More About Your Nonprofit</h4>
-    
-                                        <div class="form__group">
-                                            <div class="form__content">
-                                                <p>
-                                                    This is for employees or authorized representatives of a nonprofit. Remember, only US-based 501(c)3 nonprofits are
-                                                    eligible to receive funds using giver.ly. Please claim your nonprofit from our robust list of over 1.5 million below
-                                                    by entering your EIN.
-                                                </p>
-                                            </div><!-- /.form__content -->
-    
-                                            <div class="form__row">
-                                                <label for="ein" class="form__label">EIN</label><!-- /.form__label -->
-    
-                                                <div class="form__controls field--large">
-                                                    <input class="field" type="text" name="ein" id="ein" placeholder="Nonprofit EIN">
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__row -->
-                                        </div><!-- /.form__group -->
-                                    </div><!-- /.form__section -->
-    
-                                    <div class="form__section">
-                                        <h4 class="horizontal-line">Tell Us More About Your Nonprofit</h4>
-    
-                                        <div class="form__group">
-                                            <div class="form__row">
-                                                <label for="nonprofit-name" class="form__label">Nonprofit Name</label><!-- /.form__label -->
-    
-                                                <div class="form__controls field--xxlarge">
-                                                    <input class="field" type="text" name="nonprofit-name" id="nonprofit-name">
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__row -->
-    
-                                            <div class="form__row">
-                                                <label for="address" class="form__label">Address</label><!-- /.form__label -->
-    
-                                                <div class="form__controls field--xxlarge">
-                                                    <input class="field" type="text" name="address" id="address" placeholder="Street">
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__row -->
-    
-                                            <div class="form__row">
-                                                <div class="form__cols">
-                                                    <div class="form__col field--medium">
-                                                        <div class="form__controls">
-                                                            <input class="field" type="text" name="city" id="city" placeholder="City">
-                                                        </div><!-- /.form__controls -->
-                                                    </div><!-- /.form__col -->
-    
-                                                    <div class="form__col field--xsmall">
-                                                        <div class="form__controls">
-                                                            <input class="field" type="text" name="country" id="country" placeholder="United States">
-                                                        </div><!-- /.form__controls -->
-                                                    </div><!-- /.form__col -->
-                                                </div><!-- /.form__cols -->
-                                            </div><!-- /.form__row -->
-    
-                                            <div class="form__row">
-                                                <div class="form__cols">
-                                                    <div class="form__col field--xxsmall">
-                                                        <div class="form__controls select-arrows">
-                                                            <div class="select">
-                                                                <select class="field" name="state" id="state">
-                                                                    <option value="" disabled selected hidden>State</option>
-                                                                    
-                                                                    <option value="1">1</option>
-                                                                    
-                                                                    <option value="2">2</option>
-                                                                    
-                                                                    <option value="3">3</option>
-                                                                    
-                                                                    <option value="4">4</option>
-                                                                </select>
-                                                            </div><!-- /.select -->
-                                                        </div><!-- /.form__controls -->
-                                                    </div><!-- /.form__col -->
-    
-                                                    <div class="form__col field--xxsmall">
-                                                        <div class="form__controls">
-                                                            <input class="field" type="number" name="zip" id="zip" placeholder="Zip">
-                                                        </div><!-- /.form__controls -->
-                                                    </div><!-- /.form__col -->
-                                                </div><!-- /.form__cols -->
-                                            </div><!-- /.form__row -->
-                                            
-                                            <div class="form__row">
-                                                <label for="category" class="form__label">Your Category</label><!-- /.form__label -->
-    
-                                                <div class="form__controls field--xxlarge select-arrows">
-                                                    <div class="select">
-                                                        <select class="field" name="category" id="category">
-                                                            <option value="" disabled selected hidden>Select</option>
-                                                            
-                                                            <option value="1">1</option>
-                                                            
-                                                            <option value="2">2</option>
-                                                            
-                                                            <option value="3">3</option>
-                                                            
-                                                            <option value="4">4</option>
-                                                        </select>
-                                                    </div><!-- /.select -->
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__row -->
-    
-                                            <div class="form__row">
-                                                <label for="website" class="form__label">Website</label><!-- /.form__label -->
-                                                
-                                                <div class="form__controls field--xxlarge">
-                                                    <input class="field" type="text" name="website" pattern="^https?://" id="website" placeholder="http://">
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__row -->
-    
-                                            <div class="form__row">
-                                                <label for="annual-budget" class="form__label">Annual Budget</label><!-- /.form__label -->
-    
-                                                <div class="form__controls field--xxlarge select-arrows">
-                                                    <div class="select">
-                                                        <select class="field" name="annual-budget" id="annual-budget">
-                                                            <option value="" disabled selected hidden>Select</option>
-                                                            
-                                                            <option value="1">1</option>
-                                                            
-                                                            <option value="2">2</option>
-                                                            
-                                                            <option value="3">3</option>
-                                                            
-                                                            <option value="4">4</option>
-                                                        </select>
-                                                    </div><!-- /.select -->
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__row -->
-    
-                                            <div class="form__row">
-                                                <label for="about" class="form__label">About</label><!-- /.form__label -->
-    
-                                                <div class="form__controls field--xxlarge" data-maxlength="200">
-                                                    <textarea class="field field--textarea" name="about" id="about" cols="40" rows="5" placeholder="A really short description of what your organization does."></textarea>
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__row -->
-    
-                                            <div class="form__row optional">
-                                                <label for="organization-contact-phone" class="form__label">Organization Contact Phone</label><!-- /.form__label -->
-    
-                                                <div class="form__controls field--large">
-                                                    <input class="field" type="tel" name="organization-contact-phone" id="organization-contact-phone" placeholder="012 - 345 - 6789">
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__row -->
-    
-                                            <div class="form__row optional">
-                                                <label for="organization-contact-email" class="form__label">Organization Contact Email</label><!-- /.form__label -->
-    
-                                                <div class="form__controls field--xlarge">
-                                                    <input class="field" type="email" name="organization-contact-email" id="organization-contact-email" placeholder="marco@polo.com">
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__row -->
-    
-                                            <div class="form__row optional">
-                                                <label for="invite-administrator" class="form__label">Invite Administrator</label><!-- /.form__label -->
-    
-                                                <div class="form__controls field--xlarge">
-                                                    <input class="field" type="email" name="invite-administrator" id="invite-administrator" placeholder="marco@polo.com">
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__row -->
+                                        <div class="form__row">
+                                            <label for="first-name" class="form__label form__label--blue">Your Full Name</label><!-- /.form__label -->
 
-                                            <div class="form__row">
-                                                <div class="form__controls">
-                                                    <div class="checkbox">
-                                                        <input type="checkbox" id="checkbox-tnc" />
+                                            <div class="form__cols">
+                                                <div class="form__col field--small">
+                                                    <div class="form__controls">
+                                                        <input class="field" type="text" name="first-name" id="first-name" placeholder="First">
+                                                    </div><!-- /.form__controls -->
+                                                </div><!-- /.form__col -->
                                                 
-                                                        <label for="checkbox-tnc">I have read and agree to the <a href="#" class="tnc hover-default">Terms & Conditions</a></label>
-                                                    </div><!-- /.checkbox -->
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__row -->
-                                        </div><!-- /.form__group -->
+                                                <div class="form__col field--small">
+                                                    <div class="form__controls">
+                                                        <input class="field" type="text" name="last-name" id="last-name" placeholder="Last">
+                                                    </div><!-- /.form__controls -->
+                                                </div><!-- /.form__col -->
+                                            </div><!-- /.form__cols -->
+                                        </div><!-- /.form__row -->
+
+                                        <div class="form__row">
+                                            <label for="title" class="form__label">Your Title</label><!-- /.form__label -->
+
+                                            <div class="form__controls">
+                                                <div class="select">
+                                                    <select  id="title" name="title">
+                                                        <option value="" disabled selected hidden>Select</option>
+                                                        
+                                                        <option value="1">1</option>
+                                                        
+                                                        <option value="2">2</option>
+                                                        
+                                                        <option value="3">3</option>
+                                                        
+                                                        <option value="4">4</option>
+                                                    </select>
+                                                </div><!-- /.select -->
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__row -->
+
+                                        <div class="form__row">
+                                            <label for="phone-number" class="form__label">Your Phone Number</label><!-- /.form__label -->
+
+                                            <div class="form__controls field--medium">
+                                                <input class="field" type="tel" id="phone-number" name="phone-number" placeholder="012 - 345 - 6789">
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__row -->
+
+                                        <div class="form__row">
+                                            <label for="email" class="form__label">Your Email</label><!-- /.form__label -->
+
+                                            <div class="form__controls field--large">
+                                                <input class="field" type="email" name="email" id="email" placeholder="marco@polo.com">
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__row -->
+                                    </div><!-- /.form__section -->
+    
+                                    <div class="form__section">
+                                        <h4 class="horizontal-line">Tell Us More About Your Nonprofit</h4>
+    
+                                        <div class="form__content">
+                                            <p>
+                                                This is for employees or authorized representatives of a nonprofit. Remember, only US-based 501(c)3 nonprofits are
+                                                eligible to receive funds using giver.ly. Please claim your nonprofit from our robust list of over 1.5 million below
+                                                by entering your EIN.
+                                            </p>
+                                        </div><!-- /.form__content -->
+
+                                        <div class="form__row">
+                                            <label for="ein" class="form__label">EIN</label><!-- /.form__label -->
+
+                                            <div class="form__controls field--medium">
+                                                <input class="field" type="text" name="ein" id="ein" placeholder="Nonprofit EIN">
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__row -->
+                                    </div><!-- /.form__section -->
+    
+                                    <div class="form__section">
+                                        <h4 class="horizontal-line">Tell Us More About Your Nonprofit</h4>
+
+                                        <div class="form__row">
+                                            <label for="nonprofit-name" class="form__label">Nonprofit Name</label><!-- /.form__label -->
+
+                                            <div class="form__controls">
+                                                <input class="field" type="text" name="nonprofit-name" id="nonprofit-name">
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__row -->
+
+                                        <div class="form__row">
+                                            <label for="address" class="form__label">Address</label><!-- /.form__label -->
+
+                                            <div class="form__controls">
+                                                <input class="field" type="text" name="address" id="address" placeholder="Street">
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__row -->
+
+                                        <div class="form__row">
+                                            <div class="form__cols">
+                                                <div class="form__col field--medium">
+                                                    <div class="form__controls">
+                                                        <input class="field" type="text" name="city" id="city" placeholder="City">
+                                                    </div><!-- /.form__controls -->
+                                                </div><!-- /.form__col -->
+
+                                                <div class="form__col field--xsmall">
+                                                    <div class="form__controls">
+                                                        <input class="field" type="text" name="country" id="country" placeholder="United States">
+                                                    </div><!-- /.form__controls -->
+                                                </div><!-- /.form__col -->
+                                            </div><!-- /.form__cols -->
+                                        </div><!-- /.form__row -->
+
+                                        <div class="form__row">
+                                            <div class="form__cols">
+                                                <div class="form__col field--xxsmall">
+                                                    <div class="form__controls">
+                                                        <div class="select">
+                                                            <select name="state" id="state">
+                                                                <option value="" disabled selected hidden>State</option>
+                                                                
+                                                                <option value="1">1</option>
+                                                                
+                                                                <option value="2">2</option>
+                                                                
+                                                                <option value="3">3</option>
+                                                                
+                                                                <option value="4">4</option>
+                                                            </select>
+                                                        </div><!-- /.select -->
+                                                    </div><!-- /.form__controls -->
+                                                </div><!-- /.form__col -->
+
+                                                <div class="form__col field--xxsmall">
+                                                    <div class="form__controls">
+                                                        <input class="field" type="number" name="zip" id="zip" placeholder="Zip">
+                                                    </div><!-- /.form__controls -->
+                                                </div><!-- /.form__col -->
+                                            </div><!-- /.form__cols -->
+                                        </div><!-- /.form__row -->
+                                        
+                                        <div class="form__row">
+                                            <label for="category" class="form__label">Your Category</label><!-- /.form__label -->
+
+                                            <div class="form__controls">
+                                                <div class="select">
+                                                    <select name="category" id="category">
+                                                        <option value="" disabled selected hidden>Select</option>
+                                                        
+                                                        <option value="1">1</option>
+                                                        
+                                                        <option value="2">2</option>
+                                                        
+                                                        <option value="3">3</option>
+                                                        
+                                                        <option value="4">4</option>
+                                                    </select>
+                                                </div><!-- /.select -->
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__row -->
+
+                                        <div class="form__row">
+                                            <label for="website" class="form__label">Website</label><!-- /.form__label -->
+                                            
+                                            <div class="form__controls">
+                                                <input class="field" type="text" name="website" pattern="^https?://" id="website" placeholder="http://">
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__row -->
+
+                                        <div class="form__row">
+                                            <label for="annual-budget" class="form__label">Annual Budget</label><!-- /.form__label -->
+
+                                            <div class="form__controls">
+                                                <div class="select">
+                                                    <select name="annual-budget" id="annual-budget">
+                                                        <option value="" disabled selected hidden>Select</option>
+                                                        
+                                                        <option value="1">1</option>
+                                                        
+                                                        <option value="2">2</option>
+                                                        
+                                                        <option value="3">3</option>
+                                                        
+                                                        <option value="4">4</option>
+                                                    </select>
+                                                </div><!-- /.select -->
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__row -->
+
+                                        <div class="form__row">
+                                            <label for="about" class="form__label form__label--textarea">About</label><!-- /.form__label form__label--textarea -->
+
+                                            <div class="form__controls" >
+                                                <textarea class="field field--textarea" name="about" id="about" cols="40" rows="5" placeholder="A really short description of what your organization does."></textarea><!-- /.field field--textarea -->
+                                            </div><!-- /.form__controls -->
+
+                                            <span class="form__hint form__hint--textarea">200 characters left</span><!-- /.form__hint form__hint--textarea -->
+                                        </div><!-- /.form__row -->
+
+                                        <div class="form__row form__row--optional">
+                                            <label for="organization-contact-phone" class="form__label">Organization Contact Phone</label><!-- /.form__label -->
+
+                                            <div class="form__controls field--medium">
+                                                <input class="field" type="tel" name="organization-contact-phone" id="organization-contact-phone" placeholder="012 - 345 - 6789">
+                                            </div><!-- /.form__controls -->
+
+                                            <span class="form__hint">(optional)</span>
+                                        </div><!-- /.form__row form__row--optional -->
+
+                                        <div class="form__row form__row--optional">
+                                            <label for="organization-contact-email" class="form__label">Organization Contact Email</label><!-- /.form__label -->
+
+                                            <div class="form__controls field--large">
+                                                <input class="field" type="email" name="organization-contact-email" id="organization-contact-email" placeholder="marco@polo.com">
+                                            </div><!-- /.form__controls -->
+
+                                            <span class="form__hint">(optional)</span>
+                                        </div><!-- /.form__row form__row--optional -->
+
+                                        <div class="form__row form__row--optional">
+                                            <label for="invite-administrator" class="form__label">Invite Administrator</label><!-- /.form__label -->
+
+                                            <div class="form__controls field--large">
+                                                <input class="field" type="email" name="invite-administrator" id="invite-administrator" placeholder="marco@polo.com">
+                                            </div><!-- /.form__controls -->
+
+                                            <span class="form__hint">(optional)</span>
+                                        </div><!-- /.form__row form__row--optional -->
+
+                                        <div class="form__row">
+                                            <div class="form__controls">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" id="checkbox_terms" />
+                                            
+                                                    <label for="checkbox_terms">I have read and agree to the <a href="#" class="terms">Terms & Conditions</a><!-- /.terms --></label>
+                                                </div><!-- /.checkbox -->
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__row -->
                                     </div><!-- /.form__section -->
                                 </div><!-- /.form__body -->
     
-                                <div class="form__action">
-                                    <div class="form__action-wrapper horizontal-line">
-                                        <div class="form__action-btn-wrapper">
-                                            <button type="submit" class="form__btn form__btn--save">Save</button>
+                                <div class="form__action horizontal-line">
+                                    <button type="submit" class="form__btn form__btn--save">Save</button>
 
-                                            <input type="submit" class="form__btn form__btn--submit" value="Submit" name="submit" />
-                                        </div><!-- /.form__action-btn-wrapper -->
-                                    </div><!-- /.form__action-wrapper -->
-
-                                
-                                </div><!-- /.form__action -->
+                                    <input type="submit" class="form__btn form__btn--submit" value="Submit" name="submit" />
+                                </div><!-- /.form__action horizontal-line -->
                             </form>
                         </div><!-- /.shell -->
-                    </section><!-- /.form__register -->
+                    </div><!-- /.form-register -->
                 </main><!-- /.main -->
 
                 <footer class="footer">
-                    <div class="footer-wrapper">
-                        <div class="footer-content">
-                            <div class="copyright">
-                                <p>© 2013 Giverly LLC</p>
-                            </div><!-- /.copyright -->
-    
-                            <span class="footer-divider"></span><!-- /.footer-divider -->
-    
-                            <a href="#" class="footer-qns-link">Questions & Suggestions?</a><!-- / -->
-                        </div><!-- /.footer-content -->
-                    </div><!-- /.footer-wrapper -->
+                    <div class="copyright">
+                        <p>© 2013 Giverly LLC <span class="divider"></span><!-- /.divider --> <a href="#" class="qns-link">Questions & Suggestions?</a><!-- /.qns-link --></p>
+                    </div><!-- /.copyright -->
                 </footer><!-- /.footer -->
             </div><!-- /.body-inner-background-color -->
         </div><!-- /.body-background-overlay -->
