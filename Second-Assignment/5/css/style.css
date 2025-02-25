@@ -19,9 +19,6 @@
 
 /* ------------------------------------------------------------ *\
     Font Faces
-    Droid Serif Regular titles
-    Source Sans Pro Regular field labels/fields/footer |||semibold table headings/summary points
-
 \* ------------------------------------------------------------ */
 
 @font-face {
@@ -58,6 +55,7 @@
 :root {
     --cyan: #587a83;
     --cyan-text: #364247;
+    --light-grey-back: #DFE5E7;
     --grey-border: #39464E;
     --red: #FF5250;
     --grey: #EEEEEE;
@@ -96,33 +94,24 @@ h3 {
 }
 
 /* ------------------------------------------------------------ *\
-    cyan 587a83 88, 122, 131 Contact title name/ tabel heading background color/new applicant top color
-    cyan-text 364247 54, 66, 71 
-    red FF5250 255, 82, 80
-    grey 238 238 238 
-\* ------------------------------------------------------------ */
-
-/* ------------------------------------------------------------ *\
     Btn
 \* ------------------------------------------------------------ */
 
 .btn {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
     font: 600 14px/1.2 var(--source-sans-font-fam);
     background-color: var(--red);
     border: none;
+    width: 162px;
     height: 40px;
-    text-align: center;
-    padding:7px 21px 8px 18px;
     text-decoration: none;
-    transition: background-color .3s ease-in;
     gap: 9px;
-    border-radius: 8px;
-    white-space: nowrap;
+    border-radius: 6px;
     letter-spacing: -0.05em;
+    transition: background-color .3s ease-in;
 }
 
 .btn:where(:hover, :focus) {
@@ -139,14 +128,7 @@ h3 {
     content:'';
     width: 100%;
     height: 1px;
-}
-
-/* ------------------------------------------------------------ *\
-    Body Background
-\* ------------------------------------------------------------ */
-
-.body-background {
-    background-color: var(--grey);
+    margin-top: 21px;
 }
 
 /* ------------------------------------------------------------ *\
@@ -168,19 +150,27 @@ h3 {
     align-items: center;
 }
 
+.application-btn {
+    border-left: 1px var(--grey-border) solid;
+    background-color: var(--cyan);
+    padding: 10px 28px; 
+}
+
+/* ------------------------------------------------------------ *\
+    Profile
+\* ------------------------------------------------------------ */
+
 .profile {
-    background-color: #DFE5E7;
+    background-color: var(--light-grey-back);
     padding: 11px 13px;
     border: 1px var(--grey-border) solid;
     border-top: none;
     border-bottom: none;
+    transition: background-color .3s ease-in;
 }
 
-.application-btn {
-    border-left: 1px var(--grey-border) solid;
-    background-color: var(--cyan);
-    padding: 10px 28px;
-    
+.profile:where(:hover, :focus) {
+    background-color: var(--grey-border);
 }
 
 /* ------------------------------------------------------------ *\
@@ -198,20 +188,12 @@ h3 {
 \* ------------------------------------------------------------ */
 
 .main {
-    padding: 45px 100px 100px;
-    min-height: 1200px;
-    background-color: #fff;
+    padding: 46px 100px 98px;
+    background-color: var(--grey);
 }
 
 .main-inner {
     display: flex;
-}
-
-.application-form {
-    flex: 0 0 55%;
-}
-.application-summary {
-    flex: 0 0 45%;
 }
 
 /* ------------------------------------------------------------ *\
@@ -219,20 +201,432 @@ h3 {
 \* ------------------------------------------------------------ */
 
 .application-form {
-    padding: 16px 15px 21px;
+    flex: 0 0 50.9%;
+    padding: 17px 15px 21px;
     border: 1px var(--grey-border) solid;
+    background-color: #fff;
 }
 
 .form__head {
-    padding-block: 16px 19px;
+    padding-block: 15px 18px;
 }
 
 .form__head .cyan {
     color: var(--cyan);
+    margin-left: 6px;
+}
+
+.form__section {
+    background-color: var(--grey);
+    border: none;
+    border-radius: 4px;
+    padding: 12px 15px 15px 15px;
+}
+
+.form__section h3 {
+    margin-bottom: 19px;
+}
+
+.form__section-head {
+    display: flex;
+    gap: 20px;
+}
+
+.form__section-head h3 {
+    flex: 0 0 calc(50% - 10px);
+}
+
+.form__section + .form__section {
+    margin-top: 15px;
+}
+
+.form__row + .form__row {
+    margin-top: 22px;
+}
+
+.form__row:has(.form__hint) {
+    margin-bottom: 21px;
 }
 
 .form__cols {
-    display: grid;
-    grid-template-columns: repeat(2 , 1fr);
-    gap:20px
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.form__cols--medium {
+    width: calc(50% - 10px);
+}
+
+.form__col {
+    position: relative;
+    flex: 0 1 50%;
+}
+
+.form__label {
+    display: block;
+    margin-bottom: 5px;
+    letter-spacing: -0.04em;
+    transition: color .3s ease-in
+}
+
+.form__label:where(:hover, :focus) {
+    color: var(--cyan)
+}
+
+.form__controls--calendar {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    box-shadow: none;
+    border-radius: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.form__controls--calendar a:where(:hover, :focus) {
+    opacity: 0.7;
+}
+
+.form__actions { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 33px;
+    padding-inline: 15px;
+}
+
+/* ------------------------------------------------------------ *\
+    Field
+\* ------------------------------------------------------------ */
+
+.field {
+    height: 40px;
+    font: 400 14px/1.2 var(--source-sans-font-fam);
+    color: var(--cyan-text);
+    background-color: #fff;
+    width:100%;
+    border: 1px var(--cyan-text) solid;
+    border-radius: 4px;
+    padding-inline: 5px;
+    box-shadow: none;
+    transition: box-shadow .7s ease-in-out;
+}
+
+.field[type="number"]::-webkit-inner-spin-button,
+.field[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.field:where(:hover, :focus) { 
+    box-shadow: inset 0 0 6px 1px rgba(38, 52, 57, 0.75);
+}
+
+.field--required {
+    position: relative; 
+}
+
+.field--required::after {
+    display: inline; 
+    content: "";
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 7px;
+    height: 95%;
+    background-color: var(--red);
+    border-radius: 0 2px 2px 0;
+}
+
+.field--calendar {
+    flex: 0 1 100%;
+}
+
+/* ------------------------------------------------------------ *\
+    Select
+\* ------------------------------------------------------------ */
+
+.select select {
+    appearance: none;
+    padding-inline: 6px;
+    font: 400 14px/1.2 var(--source-sans-font-fam);
+    color: var(--cyan-text);
+    background-color: #fff;
+    width: 100%;
+    height: 40px;
+    border: 1px var(--cyan-text) solid;
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+.select select:where(:hover, :focus) { 
+    box-shadow: inset 0 0 6px 1px rgba(38, 52, 57, 0.75);
+}
+
+.select {
+    position: relative;
+}
+
+.select::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px var(--cyan-text) solid;
+    border-color: transparent currentColor currentColor transparent;
+    transform: rotate(45deg);
+    z-index: 5;
+    bottom: 19px;
+    right: 12px;
+}
+
+/* ------------------------------------------------------------ *\
+    Form Hint
+\* ------------------------------------------------------------ */
+
+.form__hint {
+    position: absolute;
+    bottom: -26px;
+    left: 0;
+    font-size: 12px;
+    white-space: nowrap;
+    letter-spacing: -0.06em;
+}
+
+.form__hint--is-static {
+    position: static;
+}
+
+.form__hint--required {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.04em;
+}
+
+.form__hint--required:before {
+    display: block;
+    content: "";
+    width: 8px;
+    height: 20px;
+    background-color: var(--red);
+    margin-right: 3px;
+}
+
+/* ------------------------------------------------------------ *\
+    Form Btn
+\* ------------------------------------------------------------ */
+
+.form__btn {
+    width: 140px;
+}
+
+/* ------------------------------------------------------------ *\
+    Application Summary
+\* ------------------------------------------------------------ */
+
+.application-summary {
+    flex: 0 0 49.1%;
+    border: 1px var(--grey-border) solid;
+    border-left: none;
+    background-color: #fff;
+    padding: 33px 33px 24px 15px;
+    letter-spacing: -0.026em;
+}
+
+.application-summary-head h3 {
+    margin-bottom: 19px;
+    letter-spacing: 0;
+}
+
+.application-summary-head .bold {
+    font: 600 14px/1.2 var(--source-sans-font-fam);
+    letter-spacing: -0.08em;
+    margin-right: 4px;
+}
+
+.application-summary-head p + p {
+    margin-top: 7px;
+}
+
+/* ------------------------------------------------------------ *\
+    Table
+\* ------------------------------------------------------------ */
+
+.table:after {
+    margin-top: 26px;
+}
+
+.table h3 {
+    margin-block: 21px 22px;
+}
+
+.table table {
+    border-collapse: separate;
+    vertical-align: middle;
+}
+
+.table th {
+    background-color: var(--cyan);
+    border: 1px solid var(--grey-border); 
+    border-width: 1px 0 0 1px;
+    height: 56px;
+    padding-inline: 17px 11px;
+    color: #fff;
+    text-align: left;
+}
+
+.table td {
+    font-size: 12px;
+    border: 1px solid var(--grey-border); 
+    border-width: 1px 0 0 1px;
+    height: 45px;
+    padding-inline: 13px;
+}
+
+.table td a {
+    color: currentColor;
+    transition: color .3s ease-in , text-shadow .3s ease-in;
+}
+
+.table td a:where(:hover, :focus) {
+    color: var(--cyan-text-hover);
+    text-shadow: 0 2px 5px rgba(7, 1, 1, 0.5);
+}
+
+.table--text-align-center{
+    text-align: center;
+}
+.table--text-align-right {
+    text-align: right;
+}
+
+.table th:first-child {
+    border-top-left-radius: 6px;
+}
+
+.table th:last-child {
+    border-top-right-radius: 6px;
+    border-width: 1px 1px 0;
+}
+
+.table td:last-child {
+    border-width: 1px 1px 0;
+}
+
+.table tr:last-child td {
+    border-width: 1px 0 1px 1px;
+}
+
+.table tr:last-child td:last-child {
+    border-width: 1px;
+}
+
+.table tr:nth-child(odd) td {
+    background-color: var(--light-grey-back);
+}
+
+.table-products .cell-size1 {
+    width: 17.26%;
+}
+
+.table-products .cell-size2 {
+    width: 15.01%;
+}
+
+.table-products .cell-size3 {
+    width: 16.89%;
+}
+
+.table-products .cell-size4 {
+    width: 17.45%;
+}
+
+.table-products .cell-size5 {
+    width: 33.39%;
+}
+
+.table-products tr th:nth-child(2),
+.table-products tr td:nth-child(2) {
+    text-align: right;
+}
+
+.table-applications tr th:nth-child(2),
+.table-applications tr td:nth-child(2) {
+    text-align: right;
+}
+
+.table-applications-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: 13px 12px;
+}
+
+.table-applications-head h3 {
+    margin: 0;
+}
+
+.table-applications .cell-size1 {
+    width: 17.26%;
+} 
+
+.table-applications .cell-size2 {
+    width: 15.01%;
+}
+
+.table-applications .cell-size3 {
+    width: 16.89%;
+}
+
+.table-applications .cell-size4 {
+    width: 17.45%;
+}
+
+.table-applications .cell-size5 {
+    width: 33.39%;
+}
+
+.table-contacts .cell-size1 {
+    width: 17.25%;
+}
+
+.table-contacts .cell-size2 {
+    width: 20.79%;
+}
+
+.table-contacts .cell-size3 {
+    width: 21.53%;
+}
+
+.table-contacts .cell-size4 {
+    width: 40.43%;
+}
+
+.table-business .cell-size1 {
+    width: 17.25%;
+} 
+
+.table-business .cell-size2 {
+    width: 82.75%;
+}
+
+/* ------------------------------------------------------------ *\
+    Footer
+\* ------------------------------------------------------------ */
+
+.footer {
+    border-top: 1px var(--grey-border) solid;
+    padding-block: 18px;
+    letter-spacing: -0.038em;
+    font-size: 12px;
+}
+
+.footer a {
+    color: currentColor;
+    transition: color .3s ease-in , text-shadow .3s ease-in;
+}
+
+.footer a:where(:hover, :focus) {
+    color: var(--cyan-text-hover);
+    text-shadow: 0 2px 5px rgba(7, 1, 1, 0.5);
 }

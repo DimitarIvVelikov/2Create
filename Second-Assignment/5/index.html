@@ -21,7 +21,7 @@
 
                 <div class="header-actions">
                     <div class="application-btn">
-                        <a href="" class="btn">
+                        <a href="#" class="btn">
                             <img src="css/images/icon-page.png" alt="icon-page" width="19" height="25">New Application
                         </a><!-- /.btn -->
                     </div><!-- /.application-btn -->
@@ -34,148 +34,592 @@
             </div><!-- /.header-wrapper -->
         </div>
     </header><!-- /.header -->
-    <div class="body-background">
-        <main class="main">
-            <div class="shell">
-                <div class="main-inner">
-                    <div class="application-form">
-                        <form action="">
-                            <header class="form__head">
-                                <h1>Contact: <span class="cyan">John Smith (12345)</span><!-- /.cyan --></h1>
-                            </header><!-- /.form__head -->
 
-                            <div class="form__body">
-                                <div class="form__section">
-                                    <h3>Details</h3>
+    <main class="main">
+        <div class="shell">
+            <div class="main-inner">
+                <div class="application-form">
+                    <form action="" method="post">
+                        <header class="form__head">
+                            <h1>Contact: <span class="cyan">John Smith (12345)</span><!-- /.cyan --></h1>
+                        </header><!-- /.form__head -->
 
-                                    <div class="form__row">
-                                        <div class="form__cols">
-                                            <div class="form__col">
-                                                <label for="title" class="form__label">Title</label>
+                        <div class="form__body">
+                            <div class="form__section">
+                                <h3>Details</h3>
 
-                                                <div class="form__controls">
-                                                    <div class="select">
-                                                        <select name="title" id="title">
-                                                            <option value="1">1</option>
+                                <div class="form__row">
+                                    <div class="form__cols">
+                                        <div class="form__col">
+                                            <label for="title" class="form__label">Title</label>
 
-                                                            <option value="2">2</option>
-                                                        </select>
-                                                    </div><!-- /.select -->
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__col -->
+                                            <div class="form__controls">
+                                                <div class="select">
+                                                    <select name="title" id="title">
+                                                        <option value="" disabled selected hidden>Choose...</option>
 
-                                            <div class="form__col">
-                                                <label for="gender" class="form__label">Gender</label>
+                                                        <option value="1">1</option>
 
-                                                <div class="form__controls">
-                                                    <div class="select">
-                                                        <select name="gender" id="gender">
-                                                            <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                    </select>
+                                                </div><!-- /.select -->
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__col -->
 
-                                                            <option value="2">2</option>
-                                                        </select>
-                                                    </div><!-- /.select -->
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__col -->
-                                        </div><!-- /.form__cols -->
-                                    </div><!-- / -->
+                                        <div class="form__col">
+                                            <label for="gender" class="form__label">Gender</label>
 
-                                    <div class="form__row">
-                                        <div class="form__cols">
-                                            <div class="form__col">
-                                                <label for="first-name" class="form__label">First name</label>
+                                            <div class="form__controls">
+                                                <div class="select">
+                                                    <select name="gender" id="gender">
+                                                        <option value="" disabled selected hidden>Choose...</option>
 
-                                                <div class="form__controls">
-                                                    <input class="field" type="text" name="first-name" id="first-name">
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__col -->
+                                                        <option value="1">1</option>
 
-                                            <div class="form__col">
-                                                <label for="dob" class="form__label">DOB</label>
+                                                        <option value="2">2</option>
+                                                    </select>
+                                                </div><!-- /.select -->
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__col -->
+                                    </div><!-- /.form__cols -->
+                                </div><!-- / -->
 
-                                                <div class="form__controls">
-                                                    <input class="field" type="date" name="dob" id="dob">
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__col -->
-                                        </div><!-- /.form__cols -->
-                                    </div><!-- / -->
+                                <div class="form__row">
+                                    <div class="form__cols">
+                                        <div class="form__col">
+                                            <label for="first-name" class="form__label">First name</label>
 
-                                    <div class="form__row">
-                                        <div class="form__cols">
-                                            <div class="form__col">
-                                                <label for="middle-name" class="form__label">Middle name</label>
+                                            <div class="form__controls field--required">
+                                                <input class="field field--required" type="text" name="first-name" id="first-name">
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__col -->
 
-                                                <div class="form__controls">
-                                                    <input class="field" type="text" name="middle-name"
-                                                        id="middle-name">
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__col -->
+                                        <div class="form__col">
+                                            <label for="dob" class="form__label">DOB</label>
 
-                                            <div class="form__col">
-                                                <label for="marital-status" class="form__label">Marital Status</label>
+                                            <div class="form__controls form__controls--calendar">
+                                                <input class="field field--calendar" type="text" name="dob" id="dob">
 
-                                                <div class="form__controls">
-                                                    <div class="select">
-                                                        <select name="marital-status" id="marital-status">
-                                                            <option value="1">1</option>
+                                                <a href="#">
+                                                    <i class="icon-calendar">
+                                                        <img src="css/images/icon-calendar.png" alt="icon-calendar">
+                                                    </i><!-- /.icon-calendar -->
+                                                </a>
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__col -->
+                                    </div><!-- /.form__cols -->
+                                </div><!-- / -->
 
-                                                            <option value="2">2</option>
-                                                        </select>
-                                                    </div><!-- /.select -->
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__col -->
-                                        </div><!-- /.form__cols -->
-                                    </div><!-- / -->
+                                <div class="form__row">
+                                    <div class="form__cols">
+                                        <div class="form__col">
+                                            <label for="middle-name" class="form__label">Middle name</label>
 
-                                    <div class="form__row">
-                                        <div class="form__cols">
-                                            <div class="form__col">
-                                                <label for="last-name" class="form__label">Last name</label>
+                                            <div class="form__controls">
+                                                <input class="field" type="text" name="middle-name" id="middle-name">
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__col -->
 
-                                                <div class="form__controls">
-                                                    <input class="field" type="text" name="last-name" id="last-name">
-                                                </div><!-- /.form__controls -->
-                                            </div><!-- /.form__col -->
+                                        <div class="form__col">
+                                            <label for="marital-status" class="form__label">Marital Status</label>
 
-                                            <div class="form__col">
-                                                <div class="form__cols">
-                                                    <div class="form__col">
-                                                        <label for="dependants" class="form__label">Dependants</label>
+                                            <div class="form__controls">
+                                                <div class="select">
+                                                    <select name="marital-status" id="marital-status">
+                                                        <option value="" disabled selected hidden>Choose...</option>
 
-                                                        <div class="form__controls">
-                                                            <div class="select">
-                                                                <select name="dependants" id="dependants">
-                                                                    <option value="1">1</option>
+                                                        <option value="1">1</option>
 
-                                                                    <option value="2">2</option>
-                                                                </select>
-                                                            </div><!-- /.select -->
-                                                        </div><!-- /.form__controls -->
-                                                    </div><!-- /.form__col -->
+                                                        <option value="2">2</option>
+                                                    </select>
+                                                </div><!-- /.select -->
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__col -->
+                                    </div><!-- /.form__cols -->
+                                </div><!-- / -->
 
-                                                    <div class="form__col">
-                                                        <div class="form__controls">
-                                                            <input class="field" type="text" name="ages" id="ages">
-                                                        </div><!-- /.form__controls -->
-                                                    </div><!-- /.form__col -->
-                                                </div><!-- /.form__cols -->
-                                            </div><!-- /.form__col -->
-                                        </div><!-- /.form__cols -->
-                                    </div><!-- / -->
-                                </div><!-- /.form__section -->
-                            </div><!-- /.form__body -->
+                                <div class="form__row">
+                                    <div class="form__cols">
+                                        <div class="form__col">
+                                            <label for="last-name" class="form__label">Last name</label>
 
-                            <div class="form__actions"></div><!-- /.form__actions -->
-                        </form>
-                    </div><!-- /.application-form -->
+                                            <div class="form__controls">
+                                                <input class="field field--required" type="text" name="last-name" id="last-name">
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__col -->
 
-                    <div class="application-summary">
+                                        <div class="form__col">
+                                            <div class="form__cols">
+                                                <div class="form__col">
+                                                    <label for="dependants" class="form__label">Dependants</label>
 
-                    </div><!-- /.application-summary -->
-                </div><!-- /.main-inner -->
-            </div><!-- /.shell -->
-        </main><!-- /.main -->
-    </div><!-- /.body-background -->
+                                                    <div class="form__controls">
+                                                        <div class="select">
+                                                            <select name="dependants" id="dependants">
+                                                                <option value="" disabled selected hidden>Choose...</option>
+
+                                                                <option value="1">1</option>
+
+                                                                <option value="2">2</option>
+                                                            </select>
+                                                        </div><!-- /.select -->
+                                                    </div><!-- /.form__controls -->
+
+                                                    <span class="form__hint">No.</span>
+                                                </div><!-- /.form__col -->
+
+                                                <div class="form__col">
+                                                    <div class="form__controls">
+                                                        <input class="field" type="text" name="ages" id="ages">
+                                                    </div><!-- /.form__controls -->
+
+                                                    <span class="form__hint">Ages - Comma seperate</span>
+                                                </div><!-- /.form__col -->
+                                            </div><!-- /.form__cols -->
+                                        </div><!-- /.form__col -->
+                                    </div><!-- /.form__cols -->
+                                </div><!-- / -->
+                            </div><!-- /.form__section -->
+
+                            <div class="form__section">
+                                <div class="form__section-head">
+                                    <h3>Drivers Licence</h3>
+
+                                    <h3>Contact Info</h3>    
+                                </div><!-- /.form__section-head -->
+                                
+                                <div class="form__row">
+                                    <div class="form__cols">
+                                        <div class="form__col">
+                                            <label for="number" class="form__label">Number</label><!-- /.form__label -->
+
+                                            <div class="form__controls">
+                                                <input class="field" type="number" name="number" id="number">
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__col -->
+                                        <div class="form__col">
+                                            <label for="home-phone" class="form__label">Home Phone</label><!-- /.form__label -->
+
+                                            <div class="form__controls">
+                                                <input class="field" type="number" name="home-phone" id="home-phone">
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__col -->
+                                    </div><!-- /.form__cols -->
+                                </div><!-- /.form__row -->
+
+                                <div class="form__row">
+                                    <div class="form__cols">
+                                        <div class="form__col">
+                                            <label for="state" class="form__label">State</label><!-- /.form__label -->
+
+                                            <div class="form__controls">
+                                                <div class="select">
+                                                    <select name="state" id="state">
+                                                        <option value="" disabled selected hidden>Choose...</option>
+
+                                                        <option value="1">1</option>
+
+                                                        <option value="2">2</option>
+                                                    </select>
+                                                </div><!-- /.select -->
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__col -->
+                                        <div class="form__col">
+                                            <label for="mobile-phone" class="form__label">Mobile</label><!-- /.form__label -->
+
+                                            <div class="form__controls">
+                                                <input class="field" type="number" name="mobile-phone" id="mobile-phone">
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__col -->
+                                    </div><!-- /.form__cols -->
+                                </div><!-- /.form__row -->
+
+                                <div class="form__row">
+                                    <div class="form__cols">
+                                        <div class="form__col">
+                                            <label for="expiry" class="form__label">Expiry</label>
+
+                                            <div class="form__controls form__controls--calendar">
+                                                <input class="field field--calendar" type="text" name="expiry" id="expiry">
+
+                                                <a href="#">
+                                                    <i class="icon-calendar">
+                                                        <img src="css/images/icon-calendar.png" alt="icon-calendar">
+                                                    </i><!-- /.icon-calendar -->
+                                                </a>
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__col -->
+
+                                        <div class="form__col">
+                                            <label for="email" class="form__label">Email</label>
+
+                                            <div class="form__controls">
+                                                <input class="field" type="text" name="email" id="email">
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__col -->
+                                    </div><!-- /.form__cols -->
+                                </div><!-- /.form__row -->
+
+
+                            </div><!-- /.form__section -->
+
+                            <div class="form__section">
+                                <h3>Address</h3>
+
+                                <div class="form__row">
+                                    <div class="form__cols">
+                                        <div class="form__col">
+                                            <div class="form__cols">
+                                                <div class="form__col">
+                                                    <label for="unit-num" class="form__label">Unit</label><!-- /.form__label -->
+
+                                                    <input type="number" name="unit-num" id="unit-num" class="field">
+                                                </div><!-- /.form__col -->
+                                                
+                                                <div class="form__col">
+                                                    <label for="street-num" class="form__label">Street #</label><!-- /.form__label -->
+                                                    
+                                                    <input type="number" name="street-num" id="street-num" class="field">
+                                                </div><!-- /.form__col -->
+                                            </div><!-- /.form__cols -->
+                                        </div><!-- /.form__col -->
+                                        
+                                        <div class="form__col">
+                                            <label for="street" class="form__label">Street</label><!-- /.form__label -->
+                                            
+                                            <input type="text" name="street" id="street" class="field">
+                                        </div><!-- /.form__col -->
+                                    </div><!-- /.form__cols -->
+                                </div><!-- /.form__row -->
+
+                                <div class="form__row">
+                                    <div class="form__cols">
+                                        <div class="form__col">
+                                            <label for="street-type" class="form__label">Street Type</label><!-- /.form__label -->
+
+                                            <div class="form__controls">
+                                                <div class="select">
+                                                    <select name="street-type" id="street-type">
+                                                        <option value="" disabled selected hidden>Choose...</option>
+
+                                                        <option value="1">1</option>
+
+                                                        <option value="2">2</option>
+                                                    </select>
+                                                </div><!-- /.select -->
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__col -->
+                                        
+                                        <div class="form__col">
+                                            <label for="suburb" class="form__label">Suburb</label><!-- /.form__label -->
+
+                                            <div class="form__controls">
+                                                <input type="text" name="suburb" id="suburb" class="field">
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__col -->
+                                    </div><!-- /.form__cols -->
+                                </div><!-- /.form__row -->
+
+                                <div class="form__row">
+                                    <div class="form__cols form__cols--medium">
+                                        <div class="form__col">
+                                            <label for="state" class="form__label">State</label><!-- /.form__label -->
+
+                                            <div class="form__controls">
+                                                <div class="select">
+                                                    <select name="state" id="state">
+                                                        <option value="" disabled selected hidden>Choose...</option>
+
+                                                        <option value="1">1</option>
+
+                                                        <option value="2">2</option>
+                                                    </select>
+                                                </div><!-- /.select -->
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__col -->
+
+                                        <div class="form__col">
+                                            <label for="postcode" class="form__label">Postcode</label><!-- /.form__label -->
+
+                                            <div class="form__controls">
+                                                <input type="text" name="postcode" id="postcode" class="field">
+                                            </div><!-- /.form__controls -->
+                                        </div><!-- /.form__col -->
+                                    </div><!-- /.form__cols -->
+                                </div><!-- /.form__row -->
+                            </div><!-- /.form__section -->
+                        </div><!-- /.form__body -->
+
+                        <div class="form__actions">
+                            <span class="form__hint form__hint--is-static form__hint--required">Required field</span>
+                            
+                            <button type="submit" class="btn form__btn">Save</button>
+                        </div><!-- /.form__actions -->
+                    </form>
+                </div><!-- /.application-form -->
+
+                <div class="application-summary">
+                    <div class="application-summary-head underline">
+                        <h3>Summary</h3>
+
+                        <p>
+                            <span class="bold">Type:</span><!-- /.bold --> Individual
+                        </p>
+                        <p>
+                            <span class="bold">Created:</span><!-- /.bold --> 24/11/2014 14:12 by John Smith
+                        </p>
+                        <p>
+                            <span class="bold">Last Updated:</span><!-- /.bold --> 25/11/2014 10:23 by John Smith
+                        </p>
+                    </div><!-- /.application-summary-head -->
+
+                    <div class="table table-products underline">
+                        <h3>Leads</h3>
+
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <colgroup>
+                                <col class="cell-size1">
+
+                                <col class="cell-size2">
+
+                                <col class="cell-size3">
+
+                                <col class="cell-size4">
+                                
+                                <col class="cell-size5">
+                            </colgroup>
+                            
+                            <tr>
+                                <th>ID</th>
+                            
+                                <th>Amount</th>
+                            
+                                <th>Created</th>
+                            
+                                <th>Team Member</th>
+                            
+                                <th>Status</th>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <a href="#">11111</a>
+                                </td>
+                            
+                                <td>$55,000</td>
+                            
+                                <td>24/11/14 09:32</td>
+                            
+                                <td>Trent Pitt</td>
+                            
+                                <td>New Lead</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <a href="#">11112</a>
+                                </td>
+                            
+                                <td>$15,000</td>
+                            
+                                <td>24/11/14 13:18</td>
+                            
+                                <td>Trent Pitt</td>
+                            
+                                <td>New Lead</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <a href="#">11113</a>
+                                </td>
+                            
+                                <td>$100,000</td>
+                            
+                                <td>25/11/14 11:32</td>
+                            
+                                <td>Trent Pitt</td>
+                            
+                                <td>Converted App</td>
+                            </tr>
+                                                        
+                            <tr>
+                                <td>
+                                    <a href="#">11111</a>
+                                </td>
+                            
+                                <td>$55,000</td>
+                            
+                                <td>24/11/14 09:32</td>
+                            
+                                <td>Trent Pitt</td>
+                            
+                                <td>Lost</td>
+                            </tr>
+                            
+                        </table>
+                    </div><!-- /.table table-products underline -->
+
+                    <div class="table table-applications underline">
+                        <div class="table-applications-head">
+                            <h3>Applications</h3>
+
+                            <a href="#" class="btn">
+                                <img src="css/images/icon-page.png" alt="icon-page" width="19" height="25">New Application
+                            </a><!-- /.btn -->
+                        </div><!-- /.table-applications-head -->
+
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <colgroup>
+                                <col class="cell-size1">
+
+                                <col class="cell-size2">
+
+                                <col class="cell-size3">
+
+                                <col class="cell-size4">
+                                
+                                <col class="cell-size5">
+                            </colgroup>
+                            
+                            <tr>
+                                <th>ID</th>
+                            
+                                <th>Amount</th>
+                            
+                                <th>Created</th>
+                            
+                                <th>Team Member</th>
+                            
+                                <th>Status</th>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <a href="#">11111</a>
+                                </td>
+                            
+                                <td>$55,000</td>
+                            
+                                <td>24/11/14 09:32</td>
+                            
+                                <td>Trent Pitt</td>
+                            
+                                <td>Conditionally Approved</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <a href="#">11112</a>
+                                </td>
+                            
+                                <td>$15,000</td>
+                            
+                                <td>24/11/14 13:18</td>
+                            
+                                <td>Trent Pitt</td>
+                            
+                                <td>Conditionally Approved</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>
+                                    <a href="#">11113</a>
+                                </td>
+                            
+                                <td>$100,000</td>
+                            
+                                <td>25/11/14 11:32</td>
+                            
+                                <td>Trent Pitt</td>
+                            
+                                <td>Conditionally Approved</td>
+                            </tr>
+                                                        
+                            <tr>
+                                <td>
+                                    <a href="#">11111</a>
+                                </td>
+                            
+                                <td>$55,000</td>
+                            
+                                <td>24/11/14 09:32</td>
+                            
+                                <td>Trent Pitt</td>
+                            
+                                <td>Conditionally Approved</td>
+                            </tr>
+                            
+                        </table>
+                    </div><!-- /.table table-applications underline -->
+
+                    <div class="table table-contacts underline">
+                        <h3>Related Contacts</h3>
+
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <colgroup>
+                                <col class="cell-size1">
+
+                                <col class="cell-size2">
+
+                                <col class="cell-size3">
+
+                                <col class="cell-size4">
+                            </colgroup>
+                            
+                            <tr>
+                                <th>ID</th>
+                            
+                                <th>First name</th>
+                            
+                                <th>Last name</th>
+                            
+                                <th>Phone</th>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <a href="#">11111</a>
+                                </td>
+                            
+                                <td>Tim</td>
+                            
+                                <td>Long</td>
+                            
+                                <td>0412123456</td>
+                            </tr>
+                        </table>
+                    </div><!-- /.table table-contacts underline -->
+
+                    <div class="table table-business">
+                        <h3>Businesses</h3>
+
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <colgroup>
+                                <col class="cell-size1">
+
+                                <col class="cell-size2">
+                            </colgroup>
+                            
+                            <tr>
+                                <th>ID</th>
+                            
+                                <th>Name</th>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <a href="#">11111</a>
+                                </td>
+                            
+                                <td>YZ Business</td>
+                            </tr>
+                        </table>
+                    </div><!-- /.table table-business underline -->
+                </div><!-- /.application-summary -->
+            </div><!-- /.main-inner -->
+        </div><!-- /.shell -->
+    </main><!-- /.main -->
 
     <footer class="footer">
         <div class="shell">
