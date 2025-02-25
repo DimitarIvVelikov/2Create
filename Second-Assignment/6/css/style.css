@@ -1,0 +1,205 @@
+/* ------------------------------------------------------------ *\
+    CSS Reset   
+\* ------------------------------------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+*:focus-visible {
+    outline: none;
+}
+
+/* ------------------------------------------------------------ *\
+    Font Faces
+\* ------------------------------------------------------------ */
+
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url(../assets/fonts/MyriadPro-Regular.woff2) format('woff2'),
+        url(../assets/fonts/MyriadPro-Regular.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../assets/fonts/Montserrat-Medium.woff2) format('woff2'),
+        url(../assets/fonts/Montserrat-Medium.woff) format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../assets/fonts/Roboto-Regular.woff2) format('woff2'),
+        url(../assets/fonts/Roboto-Regular.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../assets/fonts/Roboto-Light.woff2) format('woff2'),
+        url(../assets/fonts/Roboto-Light.woff) format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../assets/fonts/Roboto-Italic.woff2) format('woff2'),
+        url(../assets/fonts/Roboto-Italic.woff) format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../assets/fonts/Raleway-Light.woff2) format('woff2'),
+        url(../assets/fonts/Raleway-Light.woff) format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../assets/fonts/Raleway-Bold.woff2) format('woff2'),
+        url(../assets/fonts/Raleway-Bold.woff) format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../assets/fonts/Raleway-ExtraBold.woff2) format('woff2'),
+        url(../assets/fonts/Raleway-ExtraBold.woff) format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../assets/fonts/Raleway-LightItalic.woff2) format('woff2'),
+        url(../assets/fonts/Raleway-LightItalic.woff) format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(../assets/fonts/Raleway-Medium.woff2) format('woff2'),
+        url(../assets/fonts/Raleway-Medium.woff) format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ------------------------------------------------------------ *\
+    Variables
+\* ------------------------------------------------------------ */
+
+:root {
+   --black: #000;
+   --font-myriad: 'Myriad Pro', sans-serif;
+   --font-montserrat: 'Montserrat', sans-serif;
+   --font-roboto: 'Roboto', sans-serif;
+   --font-raleway: 'Raleway', sans-serif;
+}
+
+/* ------------------------------------------------------------ *\
+    Base
+\* ------------------------------------------------------------ */
+
+body {
+    font: 400 16px/1.2;
+    color: var(--black);
+    background-color: var(--color-light);
+}
+
+h1 {
+    font: 800 62px/1.2 var(--font-raleway)
+}
+
+h2 {
+    font: 800 60px/1.2 var(--font-raleway)
+}
+
+h4 {
+    font: 700 30px/1.2 var(--font-raleway)
+}
+
+/* ------------------------------------------------------------ *\
+    Shell
+\* ------------------------------------------------------------ */
+
+.shell {
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
+.shell--small {
+    max-width: 990px;
+}
+
+/* ------------------------------------------------------------ *\
+    Header
+\* ------------------------------------------------------------ */
+
+.header {
+    position: relative;
+    padding-block: 10px;
+    background-color: var(--black);
+}
+
+/* ------------------------------------------------------------ *\
+    Logo
+\* ------------------------------------------------------------ */
+
+.logo {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+/* ------------------------------------------------------------ *\
+    header bar Roboto Light.company-name Roboto Regular
+    
+    hero-main header 14px Montserrat - medium 
+    Montserrat - medium 
+    
+    Hero-main head 
+    Railway Light Italic / Railway Light / Railway ExtraBold
+    
+    Hero-actions
+    Montserrat Medium
+   
+    Railway Light Italic / Railway Light / Railway Medium / Railway Bold / Railway ExtraBold
+    Montserrat - Medium 
+    Roboto Italic / Roboto Light / Roboto Regular 
+    Myriad Pro Regular  
+
+\* ------------------------------------------------------------ */
