@@ -1,0 +1,238 @@
+/* ------------------------------------------------------------ *\
+    CSS Reset   
+\* ------------------------------------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+*:focus-visible {
+    outline: none;
+}
+
+/* ------------------------------------------------------------ *\
+    Font Faces
+    Droid Serif Regular titles
+    Source Sans Pro Regular field labels/fields/footer |||semibold table headings/summary points
+
+\* ------------------------------------------------------------ */
+
+@font-face {
+    font-family: 'Source Sans 3';
+    src: url('SourceSans3-SemiBold.woff2') format('woff2'),
+         url('SourceSans3-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Source Sans 3';
+    src: url('SourceSans3-Regular.woff2') format('woff2'),
+         url('SourceSans3-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Droid Serif';
+    src: url('DroidSerif.woff2') format('woff2'),
+         url('DroidSerif.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ------------------------------------------------------------ *\
+    Variables
+\* ------------------------------------------------------------ */
+
+:root {
+    --cyan: #587a83;
+    --cyan-text: #364247;
+    --grey-border: #39464E;
+    --red: #FF5250;
+    --grey: #EEEEEE;
+    --source-sans-font-fam: 'Source Sans 3', sans-serif;
+    --droid-serif-font-fam: 'Droid Serif', serif;
+    --cyan-hover: #293e4d;
+    --cyan-text-hover: #172734;
+    --red-hover: #c33036;
+}
+
+/* ------------------------------------------------------------ *\
+    Base
+\* ------------------------------------------------------------ */
+
+body {
+    font-family: var(--source-sans-font-fam);
+    color: var(--cyan-text);
+    font: 400 14px/1.2 var(--source-sans-font-fam)
+}
+
+h1 {
+    font: 400 24px/1.2 var(--droid-serif-font-fam)
+}
+
+h3 {
+    font: 400 18px/1.2 var(--droid-serif-font-fam)
+}
+
+/* ------------------------------------------------------------ *\
+    Shell
+\* ------------------------------------------------------------ */
+
+.shell {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+/* ------------------------------------------------------------ *\
+    cyan 587a83 88, 122, 131 Contact title name/ tabel heading background color/new applicant top color
+    cyan-text 364247 54, 66, 71 
+    red FF5250 255, 82, 80
+    grey 238 238 238 
+\* ------------------------------------------------------------ */
+
+/* ------------------------------------------------------------ *\
+    Btn
+\* ------------------------------------------------------------ */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font: 600 14px/1.2 var(--source-sans-font-fam);
+    background-color: var(--red);
+    border: none;
+    height: 40px;
+    text-align: center;
+    padding:7px 21px 8px 18px;
+    text-decoration: none;
+    transition: background-color .3s ease-in;
+    gap: 9px;
+    border-radius: 8px;
+    white-space: nowrap;
+    letter-spacing: -0.05em;
+}
+
+.btn:where(:hover, :focus) {
+    background-color: var(--red-hover);
+}
+
+/* ------------------------------------------------------------ *\
+    Heading Underline
+\* ------------------------------------------------------------ */
+
+.underline:after {
+    display: block;
+    background-color: #39464E;
+    content:'';
+    width: 100%;
+    height: 1px;
+}
+
+/* ------------------------------------------------------------ *\
+    Body Background
+\* ------------------------------------------------------------ */
+
+.body-background {
+    background-color: var(--grey);
+}
+
+/* ------------------------------------------------------------ *\
+    Header
+\* ------------------------------------------------------------ */
+
+.header {
+    border-bottom: 1px var(--grey-border) solid;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.profile {
+    background-color: #DFE5E7;
+    padding: 11px 13px;
+    border: 1px var(--grey-border) solid;
+    border-top: none;
+    border-bottom: none;
+}
+
+.application-btn {
+    border-left: 1px var(--grey-border) solid;
+    background-color: var(--cyan);
+    padding: 10px 28px;
+    
+}
+
+/* ------------------------------------------------------------ *\
+    Logo
+\* ------------------------------------------------------------ */
+
+.logo img{
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+/* ------------------------------------------------------------ *\
+    Main
+\* ------------------------------------------------------------ */
+
+.main {
+    padding: 45px 100px 100px;
+    min-height: 1200px;
+    background-color: #fff;
+}
+
+.main-inner {
+    display: flex;
+}
+
+.application-form {
+    flex: 0 0 55%;
+}
+.application-summary {
+    flex: 0 0 45%;
+}
+
+/* ------------------------------------------------------------ *\
+    Form
+\* ------------------------------------------------------------ */
+
+.application-form {
+    padding: 16px 15px 21px;
+    border: 1px var(--grey-border) solid;
+}
+
+.form__head {
+    padding-block: 16px 19px;
+}
+
+.form__head .cyan {
+    color: var(--cyan);
+}
+
+.form__cols {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap:20px
+}
