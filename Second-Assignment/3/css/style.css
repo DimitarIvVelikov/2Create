@@ -188,7 +188,7 @@ h5 {
 
 .hero-content {
     width: 35.5%;
-    margin-left: auto;
+    margin-inline: auto 20px;
 }
 
 .hero-content h5 {

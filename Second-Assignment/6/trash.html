@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <title>{ Project Name }</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="css/images/favicon.ico" />
+
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <style type="text/css" media="screen">
+    
+        .hero {
+            position:relative;
+            isolation: isolate;
+            padding-block: 230px 260px;
+        }
+        
+        .hero-background {
+            display: flex;
+            position: relative;
+            inset: 0;
+            z-index: -1;
+        }
+        
+        .hero-background-main {
+            flex: 0 0 50.1%
+        }
+        
+        .hero-background-aside {
+            flex: 0 0 49.9%
+        }
+        
+        .hero-background img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        .hero-inner {
+            position: relative;
+            display: flex;
+            z-index: 1;
+        }
+        
+        .hero-inner-main {
+            flex: 0 0 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-main-inner h1 {
+            max-width: 450px;
+            text-align: center;
+            margin-inline: auto;
+        }
+        
+        .hero-inner-aside {
+            flex: 0 0 50%;
+        }
+        </style>
+
+<div class="hero-background">
+    <div class="hero-background-main">
+        <img src="css/images/hero-main-back.jpg" alt="hero-main" width="970" height="656">
+    </div><!-- /.hero-background-main -->
+
+    <div class="hero-background-aside">
+        <img src="css/images/hero-actions-back.jpg" alt="hero-aside" width="966" height="656">
+    </div><!-- /.hero-background-aside -->
+</div><!-- /.hero-background -->
+
+<div class="hero-inner">
+    <div class="hero-inner-main">
+        <h1>The Center for Custom Label Printing</h1>
+    </div><!-- /.hero-inner-main -->
+
+    <div class="hero-inner-aside">
+        <h4>Request Quote</h4>
+    </div><!-- /.hero-inner-aside -->
+</div><!-- /.hero-inner -->
+
+</body>
+</html>

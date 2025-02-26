@@ -105,7 +105,7 @@ h3 {
     font: 600 14px/1.2 var(--source-sans-font-fam);
     background-color: var(--red);
     border: none;
-    width: 162px;
+    min-width: 162px;
     height: 40px;
     text-decoration: none;
     gap: 9px;
@@ -417,7 +417,7 @@ h3 {
 \* ------------------------------------------------------------ */
 
 .form__btn {
-    width: 140px;
+    min-width: 140px;
 }
 
 /* ------------------------------------------------------------ *\
