@@ -129,7 +129,7 @@
     --dark-grey: #585b5e;
     --grey: #eaeaea;
     --light-grey: #F1F1F1;
-    --blue: #007F9D;
+    --blue: #007f9d;
     --dark-blue: #115068;
     --green: #9FB73B;
     --font-myriad: 'Myriad Pro', sans-serif;
@@ -193,6 +193,33 @@ h6 {
 }
 
 /* ------------------------------------------------------------ *\
+    Links
+\* ------------------------------------------------------------ */
+
+.phone, .email, .address {
+    color:currentColor;
+    text-decoration: none;
+    transition: text-decoration .5s ease-in;
+}
+
+.link--blue {
+    color: var(--blue);
+}
+
+.link--block {
+    display: block;
+}
+
+.phone:where(:hover, :focus), .email:where(:hover, :focus),
+.address:where(:hover, :focus) {
+    text-decoration: underline;
+}
+
+.email {
+    font: 15px/1.2 var(--font-myriad);
+}
+
+/* ------------------------------------------------------------ *\
     Btn
 \* ------------------------------------------------------------ */
 
@@ -228,11 +255,6 @@ h6 {
     padding: 25px;
     color: #fff;
     gap: 44px;
-}
-
-.header-bar a {
-    color: currentColor;
-    text-decoration: none;
 }
 
 .header-inner {
@@ -498,6 +520,7 @@ h6 {
     color: #fff;
 }
 
+
 .section--light-grey {
     background-color: var(--light-grey);
 }
@@ -507,21 +530,31 @@ h6 {
     line-height: 1.7;
 }
 
-.section-content a {
-    color: var(--dark-blue);
-    text-decoration: none;
+.section-content--medium {
+    max-width: 1230px;
+    margin-inline: auto;
 }
 
-.section-content .phone {
-    color:currentColor
+.section-head {
+    text-align: center;
 }
 
-.section-content h4 {
+.section-head--medium {
+    max-width: 700px;
+    margin-inline: auto;
+} 
+
+.section-head h4 {
     margin-bottom: 60px;
 }
 
-.section-content h5 {
+.section-head h5 {
     margin-bottom: 40px;
+}
+
+.section-head a {
+    color: var(--dark-blue);
+    text-decoration: none;
 }
 
 .section--small-gutters {
@@ -662,9 +695,17 @@ h6 {
     display: block;
 }
 
+.section-alt-inner p {
+    font-size: 1em;
+}
+
 /* ------------------------------------------------------------ *\
     Footer
 \* ------------------------------------------------------------ */
+
+.footer {
+    border-top: 4px var(--green) solid;
+}
 
 .footer-inner {
     display: flex;
@@ -674,9 +715,72 @@ h6 {
     flex: 0 0 50%;
 }
 
+.footer-main {
+    padding: 40px 150px 75px 40px;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    margin-bottom: 30px;
+}
+
+.footer-cols {
+    display: flex;
+    gap: 40px;
+    justify-self: center;
+    align-items: flex-start;
+}
+
+.footer-col p:first-child {
+    margin-bottom: 20px;
+    font-family: var(--font-roboto);
+    font-weight: 300;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col address {
+    margin-bottom: 20px;
+}
+
 .footer-bar {
     background-color: #115068;
 }
+
+.footer-aside {
+    position: relative;
+    isolation: isolate;
+}
+
+.footer-aside-background {
+    position:absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.footer-aside-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer-aside-actions {
+    height: 32.44%;
+}
+
+/* ------------------------------------------------------------ *\
+    Form
+\* ------------------------------------------------------------ */
+
+.form {
+    height: 67.56%;
+    background-color: rgba(0, 127, 157, 0.8);
+}
+   
 
 /* ------------------------------------------------------------ *\
     header bar Roboto Light.company-name Roboto Regular
