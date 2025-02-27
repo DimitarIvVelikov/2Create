@@ -1,0 +1,108 @@
+/* ------------------------------------------------------------ *\
+    CSS Reset   
+\* ------------------------------------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+*:focus-visible {
+    outline: none;
+}
+
+/* ------------------------------------------------------------ *\
+    Font Faces
+\* ------------------------------------------------------------ */
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('AvenirNextCyr-Regular.woff2') format('woff2'),
+        url('AvenirNextCyr-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('AvenirNextCyr-Bold.woff2') format('woff2'),
+        url('AvenirNextCyr-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('AvenirNext-DemiBold.woff2') format('woff2'),
+        url('AvenirNext-DemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('AvenirNextCyr-Medium.woff2') format('woff2'),
+        url('AvenirNextCyr-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ------------------------------------------------------------ *\
+    Variables
+\* ------------------------------------------------------------ */
+
+:root {
+    --light-green: #d0f7db;
+    --green: #1fb25a;
+    --grey: #ededed;
+    --black: #252525;
+    --font-avenir-next: 'Avenir Next', sans-serif;
+}
+
+/* ------------------------------------------------------------ *\
+    Base
+\* ------------------------------------------------------------ */
+
+body {
+    font: 400 18px/1.2 var(--font-avenir-next);
+}
+
+h1 {
+    font: 700 72px/1.5 var(--font-avenir-next);
+    color: var(--green);
+}
+
+h2 {
+    font: 700 48px/1.2 var(--font-avenir-next);
+    color: var(--green);
+}
+
+h4 {
+    font: 700 21px/1.2 var(--font-avenir-next);
+    color: var(--green);
+}
+
+
+h5 {
+    font: 700 18px/1.2 var(--font-avenir-next);
+    color: var(--green);
+}
+
+/* ------------------------------------------------------------ *\
+    Shell
+\* ------------------------------------------------------------ */
+
+.shell {
+    max-width: 1050px;
+    margin-inline: auto;
+}
