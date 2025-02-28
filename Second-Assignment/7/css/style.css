@@ -162,11 +162,15 @@ h5 {
 \* ------------------------------------------------------------ */
 
 .header {
-    padding: 35px 59px 35px 40px;
+    padding-block: 35px;
+}
+
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--black);
+    margin-inline: -76px -58px;
 }
 
 .header-inner {
@@ -221,10 +225,6 @@ h5 {
     isolation: isolate;
 }
 
-.hero__main {
-    margin-right: 50%;
-}
-
 .hero__images {
     position: absolute;
     width: 48.7%;
@@ -232,6 +232,7 @@ h5 {
     margin-block: -12px;
     right: 0;
     max-height: 910px;
+    z-index: -1;
 }
 
 .hero__image {
@@ -248,7 +249,7 @@ h5 {
 }
 
 .hero__main {
-    padding-right: 50px;
+    margin-right: 56%;
 }
 
 .hero__main h1 {
