@@ -23,6 +23,8 @@
 
 :root {
     --new-frank-font: 'new-frank', sans-serif;
+    --black: #000;
+    --white: #fff;
 }
 
 /* ------------------------------------------------------------ *\
@@ -57,3 +59,148 @@ h5 {
     Socials
 \* ------------------------------------------------------------ */
 
+/* ------------------------------------------------------------ *\
+    Shell
+\* ------------------------------------------------------------ */
+
+.shell {
+    max-width: 1070px;
+    margin-inline: auto;
+}
+
+/* ------------------------------------------------------------ *\
+    Header
+\* ------------------------------------------------------------ */
+
+.header {
+    padding-block: 35px;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--black);
+    margin-inline: -36px -28px;
+}
+
+/* ------------------------------------------------------------ *\
+    Nav
+\* ------------------------------------------------------------ */
+
+.nav ul {
+    display: flex;
+    gap: 42px;
+    list-style: none;
+}
+
+.nav a {
+    color: currentColor;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 21px;
+}
+
+.nav > ul > li > a:after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: var(--black);
+    border-bottom: 1px #eaeaea solid;
+}
+
+.nav a:where(:hover, :focus) {
+
+}
+
+.nav-popup-container {
+	position: relative;
+}
+
+.nav-popup {
+	display: none;
+	position: absolute;
+	background-color: var(--black);
+	max-width: 225px;
+    z-index: 2;
+    top: 54px;
+    right: 0;
+}
+
+.nav-popup-container:where(:hover, :focus, :focus-within) .nav-popup {
+	display: block;
+}
+
+.nav-popup:before {
+    content: "";
+    position: absolute;
+    top: -10px; 
+    right: 10px;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 0 6px 10px 6px; 
+    border-color: transparent transparent black transparent;
+}
+
+
+.nav-popup ul {
+    padding: 10px 15px;
+}
+.nav-popup a {
+    color: var(--white);
+    white-space: nowrap;
+}
+
+
+/* ------------------------------------------------------------ *\
+    Logo
+\* ------------------------------------------------------------ */
+
+.logo {
+    display: block;
+}
+
+.logo img {
+    vertical-align: top;
+}
+
+/* ------------------------------------------------------------ *\
+    Hero
+\* ------------------------------------------------------------ */
+
+.hero-inner {
+    display: flex;
+    padding-block: 100px 0;
+    background-color: var(--white);
+    transform: translateZ(1px);
+    background-color: transparent;
+}
+
+.hero-inner h1 {
+    flex: 0 0 50%;
+}
+
+.hero-content {
+    flex: 0 0 50%;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    margin-top: -270px;
+
+}
+
+.hero-image img { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.break {
+    white-space: wrap;
+}
