@@ -78,7 +78,7 @@ body {
 }
 
 h1 {
-    font: 700 72px/1.5 var(--font-avenir-next);
+    font: 700 72px/1.2 var(--font-avenir-next);
     color: var(--green);
 }
 
@@ -92,7 +92,6 @@ h4 {
     color: var(--green);
 }
 
-
 h5 {
     font: 700 18px/1.2 var(--font-avenir-next);
     color: var(--green);
@@ -103,7 +102,7 @@ h5 {
 \* ------------------------------------------------------------ */
 
 .shell {
-    max-width: 1050px;
+    max-width: 1046px;
     margin-inline: auto;
 }
 
@@ -111,42 +110,412 @@ h5 {
     Btn
 \* ------------------------------------------------------------ */
 
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--black);
+    padding: 19px 42px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    border-radius: 32px;
+}
+
+.btn--small {
+    padding: 20px 33px 17px;
+}
+
 /* ------------------------------------------------------------ *\
     Testimonial
 \* ------------------------------------------------------------ */
+
+.testimonial {
+    background-color: var(--grey);
+    padding: 71px 85px 82px 66px;
+    line-height: 1.55;
+    max-width: 454px;
+}
+
+.testimonial p + p {
+    margin-top: 16px;
+}
+
+.testimonial cite {
+    font-weight: 600;
+    font-style: normal;
+}
+
+.testimonial--slide {
+    background-color: #fff;
+    padding: 50px 67px;
+    max-width: unset;
+    line-height: 1.6;
+}
+
+.testimonial--slide p + p {
+    margin-top: 11px;
+}
 
 /* ------------------------------------------------------------ *\
     Header
 \* ------------------------------------------------------------ */
 
-/* ------------------------------------------------------------ *\
-    Logo
-\* ------------------------------------------------------------ */
+.header {
+    padding: 35px 59px 35px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--black);
+}
+
+.header-inner {
+    display: flex;
+    gap: 42px;
+}
 
 /* ------------------------------------------------------------ *\
     Nav
 \* ------------------------------------------------------------ */
 
+.nav ul {
+    display: flex;
+    gap: 42px;
+    list-style: none;
+}
+
+.nav a {
+    color: var(--black);
+    text-decoration: none;
+    transition: color .3s ease-in;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: .08em;
+}
+
+.nav a:where(:hover, :focus) {
+    color: var(--green);
+}
+
+/* ------------------------------------------------------------ *\
+    Logo
+\* ------------------------------------------------------------ */
+
+.logo {
+    display: block;
+}
+
+.logo img {
+    vertical-align: top;
+}
+
 /* ------------------------------------------------------------ *\
     Hero
 \* ------------------------------------------------------------ */
 
+.hero {
+    padding-block: 97px;
+    position: relative;
+    isolation: isolate;
+}
+
+.hero__main {
+    margin-right: 50%;
+}
+
+.hero__images {
+    position: absolute;
+    width: 48.7%;
+    top: 97px;
+    margin-block: -12px;
+    right: 0;
+    max-height: 910px;
+}
+
+.hero__image {
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+    padding-block: 12px;
+}
+
+.hero__image img {
+    width: 100%;
+    height: minmax(auto, 450px);
+    object-fit: cover;
+}
+
+.hero__main {
+    padding-right: 50px;
+}
+
+.hero__main h1 {
+    margin-bottom: 13px;
+}
+
+.hero__main h4 {
+    text-transform: uppercase;
+    color: var(--black);
+    letter-spacing: 0.11em;
+    margin-bottom: 17px;
+}
+
+.hero__content {
+    max-width: 500px;
+    margin-bottom: 38px;
+    line-height: 1.5;
+}
+
+.hero__main a {
+    margin-bottom: 119px;
+}
 /* ------------------------------------------------------------ *\
     Section
 \* ------------------------------------------------------------ */
 
+.section {
+    padding-block: 58px 92px;
+}
+
+.section--large-gutters {
+    padding-block: 58px 125px;
+}
+
+.section--xsmall-gutters {
+    padding-block: 121px 120px;
+}
+
+.section--green {
+    background-color: #d0f7db;
+}
+
+.section-head {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.section-head--offset {
+    margin-bottom: 59px;
+}
+.section-head--small-offset {
+    margin-bottom: 51px;
+    padding-left: 21px;
+}
+
+.section-head--medium {
+    max-width: 470px;
+    margin-inline: auto;
+}
+
+.section-actions {
+    text-align: center;
+}
+
 /* ------------------------------------------------------------ *\
-    Article
+    Articles
 \* ------------------------------------------------------------ */
 
+.articles {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
 
+.article {
+    padding: 27px 35px 58px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
+    line-height: 1.56;
+}
+.article figure {
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.article i {
+    display: inline-block;
+}
+
+.article img {
+    vertical-align: top;
+}
+
+.article h5 {
+    text-transform: uppercase;
+    margin-bottom: 23px;
+    letter-spacing: 0.1em;
+}
+
+/* ------------------------------------------------------------ *\
+    Tiles
+\* ------------------------------------------------------------ */
+
+.tiles {
+    margin-bottom: 113px;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 30px;
+}
+
+.tile {
+    position: relative;
+    max-height: 457px;
+}
+
+.tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tile--2of2 {
+    grid-column: span 2;
+}
+
+.tile-head {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 30px 45px 28px 40px;
+    background-color: #fff;
+}
+
+.tile-head h4 {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* ------------------------------------------------------------ *\
+    Slider
+\* ------------------------------------------------------------ */
+
+.slider {
+    position: relative;
+    padding-inline: 37px;
+}
+  
+.slider__clip {
+    max-width: 700px;
+    overflow: hidden;
+    margin:0 auto 36px;
+}
+  
+.slider__slides {
+    display: flex;
+    width: 300%; 
+}
+  
+.slider__slide {
+    flex: 0 0 33.33%; 
+}
+
+.slider__paging {
+    display: flex;
+    justify-content: center;
+    padding-left: 55px;
+}
+  
+.slider__paging ol {
+    list-style: none;
+    display: flex;
+    gap: 14px;
+}
+  
+.slider__paging a {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #eaeaea;
+    text-decoration: none;
+}
+  
+.slider__paging li.is-current a {
+    background-color: var(--black);
+}
+
+.slider__actions {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 17px 93px;
+}
+  
+.slider__prev,
+.slider__next {
+    line-height: 0;
+}
 
 /* ------------------------------------------------------------ *\
     Footer
 \* ------------------------------------------------------------ */
 
-/* ------------------------------------------------------------ *\
+.footer {
+    background-color: var(--black);
+}
 
-    Slider 130 240
-    Green Section 250 230
+.footer-main { 
+    color: #fff;
+    padding-block: 102px 50px;
+}
+
+.footer-cols {
+    display: flex;
+    gap: 84px;
+    align-items: center;
+}
+
+.footer-col h5 { 
+    color: currentColor;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.footer-col--offset {
+    margin-left: -17px;
+}
+.footer-col--inset {
+    padding-left: 35px;
+}
+
+/* ------------------------------------------------------------ *\
+    Copyright
 \* ------------------------------------------------------------ */
+
+.copyright {
+    color: var(--grey);
+    text-align: center;
+    padding-block: 57px;
+    font-size: 12px;
+}
+
+/* ------------------------------------------------------------ *\
+    Contacts
+\* ------------------------------------------------------------ */
+
+.contacts ul {
+    list-style: none;
+}
+
+.contacts a {
+    color:currentColor;
+    text-decoration: none;
+}
+
+.contacts li + li {
+    margin-top: 6px;
+}
+
+/* ------------------------------------------------------------ *\
+    Socials
+\* ------------------------------------------------------------ */
+
+.socials ul {
+    display: flex;
+    list-style: none;
+    gap: 30px
+}
