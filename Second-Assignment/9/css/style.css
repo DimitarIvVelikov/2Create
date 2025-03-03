@@ -1,0 +1,180 @@
+/* ------------------------------------------------------------ *\
+    CSS Reset   
+\* ------------------------------------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+*:focus-visible {
+    outline: none;
+}
+
+/* ------------------------------------------------------------ *\
+    Font Faces
+\* ------------------------------------------------------------ */
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../assets/fonts/Poppins-Black.woff2) format('woff2'),
+        url(../assets/fonts/Poppins-Black.woff) format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url(../assets/fonts/Helvetica-Bold.woff2) format('woff2'),
+        url(../assets/fonts/Helvetica-Bold.woff) format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../assets/fonts/Poppins-Bold.woff2) format('woff2'),
+        url(../assets/fonts/Poppins-Bold.woff) format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url(../assets/fonts/HelveticaNeue-Roman.woff2) format('woff2'),
+        url(../assets/fonts/HelveticaNeue-Roman.woff) format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../assets/fonts/Poppins-Medium.woff2) format('woff2'),
+        url(../assets/fonts/Poppins-Medium.woff) format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ------------------------------------------------------------ *\
+    Variables
+\* ------------------------------------------------------------ */
+
+:root {
+    --poppins: 'Poppins', sans-serif;
+    --helvetica: 'Helvetica', sans-serif;
+    --helvetica-neue: 'Helvetica Neue', sans-serif;
+    --white: #ffffff; 
+    --yellow: #EDC142;
+    --lighter-grey: #EBEBEB;
+    --light-grey: #F4F4F4;
+    --grey: #B4B4B4;
+    --dark-grey: #95989A;
+    --darker-grey: #5D5D5D;
+}
+
+/* ------------------------------------------------------------ *\
+    Base
+\* ------------------------------------------------------------ */
+
+body {
+    font: 16px/1.2 var(--helvetica-neue)
+}
+
+h1 {
+    font: 900 30px/1.2 var(--poppins)
+}
+
+h2 {
+    font: 900 24px/1.2 var(--poppins)
+}
+
+h3 {
+    font: 700 20px/1.2 var(--poppins)
+}
+
+
+/* ------------------------------------------------------------ *\
+    Btn
+\* ------------------------------------------------------------ */
+
+/* Helvetica */
+
+.btn {
+    display: inline-block;
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font: 700 15px/1.2 var(--helvetica);
+}
+
+/* ------------------------------------------------------------ *\
+    Shell
+\* ------------------------------------------------------------ */
+
+.shell {
+    max-width: 1026px;
+    margin-inline: auto;
+}
+
+.shell--small {
+    max-width: 964px;
+}
+
+.shell--large {
+    max-width: 1160px;
+}
+
+/* ------------------------------------------------------------ *\
+    Header
+\* ------------------------------------------------------------ */
+
+.header {
+    padding-block: 30px 30px;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--black);
+    margin-inline: -44px -30px;
+}
+
+
+/* ------------------------------------------------------------ *\
+    Hero 
+\* ------------------------------------------------------------ */
+
+.hero-head-play-button {
+	position:relative;
+    display: block;
+    width: 142px;
+    height: 142px;
+    border-radius: 50%;
+    border: 2px black solid; 
+}
+
+.hero-head-play-button:after {
+	position:absolute;
+    display: block;
+	content:'';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 0 20px 35px; 
+    border-color: transparent transparent transparent black; 
+    top: calc(50% + 10px);
+    left: calc(50% + 10px);
+    transform: translate(calc(-50%), calc(-50% - 10px));
+}
