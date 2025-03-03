@@ -32,11 +32,11 @@
 \* ------------------------------------------------------------ */
 
 body {
-    font: 300 24px/1.5 var(--new-frank-font)
+    font: 300 24px/1.67 var(--new-frank-font)
 }
 
 h1 {
-    font: 700 140px/1.2 var(--new-frank-font)
+    font: 700 140px/1.06 var(--new-frank-font)
 }
 
 h2 {
@@ -47,17 +47,32 @@ h4 {
     font: 700 32px/1.2 var(--new-frank-font)
 }
 
-h5 {
+h6 {
     font: 700 21px/1.2 var(--new-frank-font)
 }
 
 /* ------------------------------------------------------------ *\
-    Contacts
+    Btn
 \* ------------------------------------------------------------ */
 
-/* ------------------------------------------------------------ *\
-    Socials
-\* ------------------------------------------------------------ */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: currentColor;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.btn--underline:after {
+    content: "";
+    display: block;
+    width: 98%;
+    height: 6px;
+    background-color: currentColor;
+    margin-top: 4px;
+}
 
 /* ------------------------------------------------------------ *\
     Shell
@@ -73,7 +88,7 @@ h5 {
 \* ------------------------------------------------------------ */
 
 .header {
-    padding-block: 35px;
+    padding-block: 69px 15px;
 }
 
 .header-inner {
@@ -81,7 +96,7 @@ h5 {
     justify-content: space-between;
     align-items: center;
     color: var(--black);
-    margin-inline: -36px -28px;
+    margin-inline: -44px -30px;
 }
 
 /* ------------------------------------------------------------ *\
@@ -90,8 +105,9 @@ h5 {
 
 .nav ul {
     display: flex;
-    gap: 42px;
+    gap: 32px;
     list-style: none;
+    letter-spacing: 0.1em;
 }
 
 .nav a {
@@ -126,8 +142,8 @@ h5 {
 	background-color: var(--black);
 	max-width: 225px;
     z-index: 2;
-    top: 54px;
-    right: 0;
+    top: 67px;
+    right: 3px;
 }
 
 .nav-popup-container:where(:hover, :focus, :focus-within) .nav-popup {
@@ -137,23 +153,21 @@ h5 {
 .nav-popup:before {
     content: "";
     position: absolute;
-    top: -10px; 
-    right: 10px;
+    top: -10px;
+    right: 19px;
     transform: translateX(-50%);
     border-style: solid;
     border-width: 0 6px 10px 6px; 
     border-color: transparent transparent black transparent;
 }
 
-
 .nav-popup ul {
-    padding: 10px 15px;
+    padding: 10px 26px;
 }
 .nav-popup a {
     color: var(--white);
     white-space: nowrap;
 }
-
 
 /* ------------------------------------------------------------ *\
     Logo
@@ -173,7 +187,7 @@ h5 {
 
 .hero-inner {
     display: flex;
-    padding-block: 100px 0;
+    padding-block: 109px 0;
     background-color: var(--white);
     transform: translateZ(1px);
     background-color: transparent;
@@ -181,16 +195,22 @@ h5 {
 
 .hero-inner h1 {
     flex: 0 0 50%;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
 .hero-content {
     flex: 0 0 50%;
+    font-size: 36px;
+    padding-inline: 68px 30px;
+    margin-top: -9px;
+    line-height: 1.3;
 }
 
 .hero-image {
     width: 100%;
     height: auto;
-    margin-top: -270px;
+    margin-top: -261px;
 
 }
 
@@ -201,6 +221,395 @@ h5 {
     
 }
 
-.break {
-    white-space: wrap;
+/* ------------------------------------------------------------ *\
+    Section Articles
+First second article 166px
+     second third 166px
+\* ------------------------------------------------------------ */
+
+.section-articles {
+    padding-block: 150px 0;
+}
+
+.section-articles-head {
+    font-size: 48px;
+    max-width: 770px;
+    margin:0 auto 78px;
+    text-align: center;
+    letter-spacing: 0.002em;
+    line-height: 1.35;
+}
+
+/* ------------------------------------------------------------ *\
+    Article
+\* ------------------------------------------------------------ */
+
+.article { 
+    padding-block: 82px 83px;
+    display: flex;
+}
+
+.article figure {
+    flex: 0 0 50%;
+    width: 100%;
+    max-height: 709px;
+    object-fit: cover;
+}
+
+.article figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article-content {
+    max-width: 533px;
+    padding: 103px 0 0 69px; 
+}
+
+.article-content h2 {
+    margin-bottom: 33px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.article-meta {
+    margin-bottom: 39px;
+}
+
+.article--reversed {
+    flex-direction: row-reverse;
+    gap: 0;
+}
+
+.article--reversed .article-content {
+    padding: 118px 69px 0 0;
+}
+
+.article-image-small {
+    gap: 15px;
+}
+
+.article-image-small figure {
+    flex: 0 0 48.3%;
+}
+.article-image-small .article-content {
+    padding: 114px 91px 0 0; 
+}
+
+.article-content--offset {
+    padding: 110px 0 0 69px;}
+
+/* ------------------------------------------------------------ *\
+    Section
+\* ------------------------------------------------------------ */
+
+.section {
+    padding-block: 84px 89px;
+}
+
+.section-head {
+    max-width: 550px;
+}
+
+.section-head h2 {
+    margin-bottom: 41px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.section-head a {
+    text-decoration: none;
+    color: currentColor
+} 
+
+/* ------------------------------------------------------------ *\
+    Image List
+\* ------------------------------------------------------------ */
+
+.image-list {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 10px;
+
+    padding-block: 65px 80px;
+}
+
+.image-list img{
+    width: 100%;
+    height: auto;
+}
+
+/* ------------------------------------------------------------ *\
+    Team
+\* ------------------------------------------------------------ */
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 126px;
+    padding-block: 66px;
+}
+
+.team-content {
+    max-width: 350px;
+    margin-top: -64px;
+}
+
+.team-content h2 {
+    margin-bottom: 47px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* ------------------------------------------------------------ *\
+    Grid
+\* ------------------------------------------------------------ */
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid figure {
+    width: 100%;
+    height: 100%;
+}
+  
+.grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid__col {
+    max-height: 696px;
+}
+
+.grid__col--1of3 {
+    flex: 0 0 36.2%;
+}
+.grid__col--2of3 {
+    flex: 0 0 63.8%;
+}
+
+/* ------------------------------------------------------------ *\
+    Footer
+\* ------------------------------------------------------------ */
+
+.footer {
+    padding: 156px 0px 160px 10px;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.footer-main {
+    margin-bottom: 140px;
+}
+
+.footer-main-head {
+    max-width: 630px;
+    margin-bottom: 100px;
+}
+
+.footer-main-head h2{
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.footer-cols {
+    display: flex;
+    gap: 161px;
+}
+
+.footer-col {
+    flex: 0 0 41%;
+}
+
+.footer-col h4 {
+    margin-bottom: 43px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.footer-col p + p {
+    margin-top: 39px;
+}
+
+.footer-col address {
+    margin-block: 50px 23px;
+    font-style: normal;
+}
+
+/* ------------------------------------------------------------ *\
+    Contacts
+\* ------------------------------------------------------------ */
+
+.contacts ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0.155em;
+}
+
+.contacts a {
+    color: currentColor;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.contacts a:after {
+    content: "";
+    display: block;
+    width: 99%;
+    height: 6px;
+    background-color: currentColor;
+    margin-top: 3px;
+}
+
+/* ------------------------------------------------------------ *\
+    Socials
+\* ------------------------------------------------------------ */
+
+.socials  ul {
+    list-style: none;
+    display: flex;
+    gap: 45px;
+}
+
+.socials a {
+    display: inline-block;
+}
+
+
+.socials i {
+    display: inline-block;
+}
+
+.socials img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+
+/* ------------------------------------------------------------ *\
+    Form
+\* ------------------------------------------------------------ */
+
+.form {
+    color: var(--white);
+    margin-bottom: 199px;
+}
+
+.form__head {
+    margin-bottom: 159px;
+}
+
+.form__head h2 {
+    margin-bottom: 43px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.form__head-content {
+    max-width: 630px;
+}
+
+.form__head-meta {
+    margin-block: 39px 65px;
+    font-weight: 700;
+}
+
+.form__head-actions {
+    display: flex;
+    gap: 40px;
+}
+
+.form__row + .form__row {
+    margin-top: 68px;
+}
+
+.form__body { 
+    margin-bottom: 58px;
+}
+
+.form__label {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-bottom: 26px;    
+    font-weight: 700;
+    font-size: 21px;
+}
+
+
+
+/* ------------------------------------------------------------ *\
+    Field
+\* ------------------------------------------------------------ */
+
+.field {
+    width: 100%;
+    height: 102px;
+    border: none;
+    background-color: #353535;
+}
+
+.field--textarea {
+    height: 321px;
+}
+
+/* ------------------------------------------------------------ *\
+    Form Btn
+\* ------------------------------------------------------------ */
+
+.form__btn {
+    display: inline-block;
+    color: currentColor;
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    font-size: 21px;
+}
+
+.form__btn--underline:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: currentColor;
+    margin-top: 2px;
+}
+
+.form__btn-wrapper {
+    display: inline-block;
+}
+
+/* ------------------------------------------------------------ *\
+    Credits
+\* ------------------------------------------------------------ */
+
+.credits {
+    text-align: center;
+}
+
+
+.credits-content + .credits-content {
+    margin-top: 142px;
+}
+
+.credits-content {
+    text-transform: uppercase;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 0.17em;
+}
+
+.credits-content p {
+    margin-bottom: 43px;
 }

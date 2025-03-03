@@ -244,7 +244,7 @@ h5 {
 
 .hero__image img {
     width: 100%;
-    height: minmax(auto, 450px);
+    max-height: 450px;
     object-fit: cover;
 }
 
