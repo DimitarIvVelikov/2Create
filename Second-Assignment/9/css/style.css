@@ -58,6 +58,15 @@
 }
 
 @font-face {
+    font-family: 'Helvetica Neue';
+    src: url(../assets/fonts/HelveticaNeue-Bold.woff2) format('woff2'),
+         url(../assets/fonts/HelveticaNeue-Bold.woff) format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'Poppins';
     src: url(../assets/fonts/Poppins-Medium.woff2) format('woff2'),
         url(../assets/fonts/Poppins-Medium.woff) format('woff');
@@ -75,7 +84,7 @@
     --helvetica: 'Helvetica', sans-serif;
     --helvetica-neue: 'Helvetica Neue', sans-serif;
     --white: #ffffff; 
-    --yellow: #EDC142;
+    --yellow: #edc142;
     --lighter-grey: #EBEBEB;
     --light-grey: #F4F4F4;
     --grey: #B4B4B4;
@@ -88,18 +97,23 @@
 \* ------------------------------------------------------------ */
 
 body {
+    color: var(--white);
     font: 16px/1.2 var(--helvetica-neue)
 }
 
 h1 {
-    font: 900 30px/1.2 var(--poppins)
+    font: 700 80px/1.2 var(--poppins)
 }
 
 h2 {
-    font: 900 24px/1.2 var(--poppins)
+    font: 900 30px/1.2 var(--poppins)
 }
 
 h3 {
+    font: 900 25px/1.2 var(--poppins)
+}
+
+h4 {
     font: 700 20px/1.2 var(--poppins)
 }
 
@@ -140,17 +154,44 @@ h3 {
 \* ------------------------------------------------------------ */
 
 .header {
-    padding-block: 30px 30px;
+    padding-block:30px;
+    background-color: var(--yellow);
 }
 
 .header-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--black);
-    margin-inline: -44px -30px;
+
+}
+/* ------------------------------------------------------------ *\
+    Nav
+\* ------------------------------------------------------------ */
+
+.nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
 }
 
+.nav a {
+    color: currentColor;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font: 700 14px/1.2 var(--poppins)
+}
+
+/* ------------------------------------------------------------ *\
+    Logo
+\* ------------------------------------------------------------ */
+
+.logo {
+    color: currentColor;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
 
 /* ------------------------------------------------------------ *\
     Hero 
@@ -162,7 +203,8 @@ h3 {
     width: 142px;
     height: 142px;
     border-radius: 50%;
-    border: 2px black solid; 
+    border: 2px var(--white) solid; 
+    margin:0 auto 50px;
 }
 
 .hero-head-play-button:after {
@@ -173,8 +215,133 @@ h3 {
     height: 0;
     border-style: solid;
     border-width: 20px 0 20px 35px; 
-    border-color: transparent transparent transparent black; 
+    border-color: transparent transparent transparent var(--white); 
     top: calc(50% + 10px);
     left: calc(50% + 10px);
     transform: translate(calc(-50%), calc(-50% - 10px));
+}
+
+.hero {
+    min-height: 900px;
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.hero-background img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    vertical-align: top;
+}
+
+.hero-inner {
+    max-width: 500px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.hero-inner h1 {
+    margin-bottom: 45px;
+}
+
+
+/* ------------------------------------------------------------ *\
+    Socials 
+\* ------------------------------------------------------------ */
+
+.socials ul {
+   list-style: none;
+}
+
+.socials--absolute {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.socials--absolute ul {
+    display: flex;
+    gap: 20px;
+}
+
+/* ------------------------------------------------------------ *\
+    Section 
+\* ------------------------------------------------------------ */
+
+.section {
+    padding-block: 60px 60px;
+}
+
+.section-head {
+    color: var(--darker-grey);
+    max-width: 480px;
+}
+
+.section-head h2 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* ------------------------------------------------------------ *\
+    Image List 
+\* ------------------------------------------------------------ */
+
+.image-list {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.image-list figure {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.image-list img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: top;
+}
+
+.image-overlay {
+    position: absolute;
+    isolation: isolate;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    inset: 0;
+    background-color: rgba(237, 193, 66, 0.5); /* Orange overlay with 0.5 opacity */
+}
+
+.image-overlay h3 {
+    text-transform: uppercase;
+}
+
+/* ------------------------------------------------------------ *\
+    Services
+\* ------------------------------------------------------------ */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    color: var(--yellow);
+    text-align: center;
+    gap: 30px 20px;
+}
+
+.services h3 {
+    text-transform: uppercase;
 }
