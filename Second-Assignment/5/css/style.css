@@ -438,7 +438,7 @@ h3 {
     letter-spacing: 0;
 }
 
-.application-summary-head .bold {
+.application-summary-head strong {
     font: 600 14px/1.2 var(--source-sans-font-fam);
     letter-spacing: -0.08em;
     margin-right: 4px;
